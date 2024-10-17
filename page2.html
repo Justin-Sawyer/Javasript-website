@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javasript</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
+        rel="stylesheet" 
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" 
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar navbar-expand-lg bg-info-subtle" id="top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/index.html">J's JavaScript</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse bg-info-subtle" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="/index.html">Previous Page</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Menu</a>
+                    <ul class="dropdown-menu bg-info-subtle border-0">
+
+                        <!--- Strings -->
+                        <li class="nav-item dropend">
+                            <a class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Strings
+                            </a>
+                            <ul class="dropdown-menu border-0">
+                                <li class="dropdown-items"><a class="dropdown-item top-dropdown-item" href="#strings">Strings</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#String Methods">String Methods</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#"></a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#"></a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item last-dropdown-item" href="#"></a></li>
+                            </ul>
+                        </li>
+                        <li><hr class="dropdown-divider"></li>
+
+                        
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/page2.html">Next Page</a>
+                </li>
+                <!--<li class="nav-item">
+                    <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                </li>-->
+                </ul>
+                <!--<form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>-->
+            </div>
+        </div>
+    </nav>
+
+    <!-- CARD ARTCILES -->
+
+    <!-- STRINGS -->
+<div class="container title">
+    <div class="row align-items-start">
+        <h2 id="strings">Strings</h2>
+
+        <!-- String Methods -->
+        <div class="col-md-12" id="string-methods">
+            <div class="card shadow">
+                <div class="card-body">
+                    <h3 id="string-methods">string.methods()</h3>
+                    <div class="container">
+                        <div class="row align-items-start">
+                            
+                            <!-- 12 -->
+                            <div class="col-md-12 inner-col">
+                                <h4></h4>
+                            </div>
+
+                            <!-- 4 -->
+                            <div class="col-md-4 inner-col">
+                                <h4 class="formula" id="panagrams">ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz 0123456789 #@&é"'(§è!çà)-°_^¨$€£*ù%`<>?,.;/:+= #@&é"'(§è!çà)-°_^¨$€£*ù%`<>?,.;/:+= abcdefghijklmnopqrstuvwxyz 0123456789 ABCDEFGHIJKLMNOPQRSTUVWXYZ</h4>
+                                <input class="form-control form-control-sm" type="text" placeholder="Enter character(s)" aria-label=".form-control-sm example" id="letter-methods">
+                                <div class="btn-group w-100" role="group" aria-label="Basic example">
+                                    <button class="btn bg-primary-subtle border-dark btn-sm group-button" id="letterMethods">Submit Character(s)</button>
+                                </div>
+                                <p id="number-of-letters"></p>
+                            </div>
+                            <div class="col-md-4 inner-col">
+
+                                <!-- string.toUpperCase() -->
+                                <h5>string.toUpperCase()</h5>
+                                <pre class="hide-string-methods shadow" id="toUpperCase-code"></pre>
+                                <!-- Show / Hide -->
+                                <div class="container">
+                                    <div class="row justify-content-between">
+                                        <div class="col-sm-6 hide left-button" id="show-toUpperCase-code">
+                                            <a class="back-to-top btn bg-info-subtle border-dark btn-sm w-100" id="show-toUpperCase-code-button">Show Changes</a>
+                                        </div>
+                                        <div class="col-sm-6 hide right-button" id="hide-toUpperCase-code">
+                                            <a class="back-to-top btn bg-danger-subtle border-dark btn-sm w-100" id="hide-toUpperCase-code-button">Hide changes</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container hide" id="hide-toUpperCase-container">
+                                    <div class="row align-items-start" id="">
+                                        <div class="col inner-col" id="">
+                                            <span id="changed-toUpperCase"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-4 inner-col">
+                                
+                                <!-- string.toLowerCase() -->
+                                <h5>string.toLowerCase()</h5>
+                                <pre class="hide-string-methods shadow" id="toLowerCase-code"></pre>
+                                <!-- Show / Hide -->
+                                <div class="container">
+                                    <div class="row align-items-start">
+                                        <div class="col-sm-6 hide left-button" id="show-toLowerCase-code">
+                                            <a class="back-to-top btn bg-info-subtle border-dark btn-sm w-100" id="show-toLowerCase-code-button">Show Changes</a>
+                                        </div>
+                                        <div class="col-sm-6 hide right-button" id="hide-toLowerCase-code">
+                                            <a class="back-to-top btn bg-danger-subtle border-dark btn-sm w-100" id="hide-toLowerCase-code-button">Hide Changes</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container hide" id="hide-toLowerCase-container">
+                                    <div class="row align-items-start" id="">
+                                        <div class="col inner-col" id="">
+                                            <span id="changed-toLowerCase"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container">
+                        <div class="row align-items-start">
+                                
+                            <div class="col-md-4 inner-col">
+                            </div>
+                            <div class="col-md-4 inner-col">
+                                
+                                <!-- string.trim() -->
+                                <h5>string.trim()</h5>
+                                <pre class="hide-string-methods shadow" id="trim-code"></pre>
+                                <table class="hide-table" id="string-trim-table">
+                                    <tr class="hide-string-methods" id="hide-trim-method">
+                                        <th>Original value </th>
+                                        <th>:</th>
+                                        <th id="trim-position"></th>
+                                    </tr>
+                                    <tr class="hide-string-methods" id="hide-trim-value">
+                                        <th>Trimmed value </th>
+                                        <th>:</th>
+                                        <th id="trim"></th>
+                                    </tr>
+                                </table>
+                                <p class="hide-string-methods" id="hide-trim-explanation">trim() removes white space from the start or end</p>
+                            </div>
+
+                            <div class="col-md-4 inner-col">    
+                                <!-- string.charAt() -->
+                                <h5>string.charAt()</h5>
+                                <pre class="hide-string-methods shadow" id="charAt-code"></pre>
+                                <table class="hide-table" id="charAt-table">
+                                    <tr class="hide-string-methods" id="hide-charAt-method">
+                                        <th>Index # </th>
+                                        <th>:</th>
+                                        <th id="charAt-position"></th>
+                                    </tr>
+                                    <tr class="hide-string-methods" id="hide-charAt-value">
+                                        <th>Character </th>
+                                        <th>:</th>
+                                        <th id="charAt"></th>
+                                    </tr>
+                                    <tr class="hide-string-methods" id="hide-charAt-place">
+                                        <th>Position </th>
+                                        <th>:</th>
+                                        <th class="red"><span id="counted-charAt"></span><span id="st-nd-rd-th-charAt"></span></th>
+                                    </tr>
+                                </table>
+                                <p class="hide-string-methods" id="hide-charAt-explanation">charAt() retrieves the string character at the given index number</p>                                
+                            </div>
+                        </div>
+                    </div>
+                            
+                    <div class="container">
+                        <div class="row align-items-start">
+                                
+                            <div class="col-md-4 inner-col">
+                            </div>
+
+                            <div class="col-md-4 inner-col"> 
+                                <!-- string.indexOf() -->
+                                <h5>string.indexOf()</h5>
+                                <pre class="hide-string-methods shadow" id="indexOf-code"></pre>
+                                <table class="hide-table" id="string-indexOf-table">
+                                    <tr class="hide-string-methods" id="hide-indexOf-method">
+                                        <th>Character to index </th>
+                                        <th>:</th>
+                                        <th id="indexOf-position"></th>
+                                    </tr>
+                                    <tr class="hide-string-methods" id="hide-indexOf-value">
+                                        <th>Index # </th>
+                                        <th>:</th>
+                                        <th id="indexOf"></th>
+                                    </tr>
+                                    <tr class="hide-string-methods" id="hide-indexOf-place">
+                                        <th>Position </th>
+                                        <th>:</th>
+                                        <th class="red"><span id="counted-indexOf"></span><span id="st-nd-rd-th-indexOf"></span></th>
+                                    </tr>
+                                </table>
+                                <p class="hide-string-methods" id="hide-indexOf-explanation">indexOf() retrieves the <span class="result">FIRST</span> zero-indexed occurence of a character</p>
+                            </div>
+
+                            <div class="col-md-4 inner-col"> 
+                                <!-- string.lastIndexOf() -->
+                                <h5>string.lastIndexOf()</h5>
+                                <pre class="hide-string-methods shadow" id="lastIndexOf-code"></pre>
+                                <table class="hide-table" id="string-lastIndexOf-table">
+                                    <tr class="hide-string-methods" id="hide-lastIndexOf-method">
+                                        <th>Character to index </th>
+                                        <th>:</th>
+                                        <th id="lastIndexOf-position"></th>
+                                    </tr>
+                                    <tr class="hide-string-methods" id="hide-lastIndexOf-value">
+                                        <th>Last Index # </th>
+                                        <th>:</th>
+                                        <th id="lastIndexOf"></th>
+                                    </tr>
+                                    <tr class="hide-string-methods" id="hide-lastIndexOf-place">
+                                        <th>Position </th>
+                                        <th>:</th>
+                                        <th class="red"><span id="counted-lastIndexOf"></span><span id="st-nd-rd-th-lastIndexOf"></span></th>
+                                    </tr>
+                                </table>
+                                <p class="hide-string-methods" id="hide-lastIndexOf-explanation">lastIndexOf() retrieves the <span class="result">LAST</span> zero-indexed occurence of a character</p>
+
+                                
+                            </div>
+                        </div>
+                        
+                        <!-- Show / Hide / Top -->
+                        <div class="row align-items-start">
+                            <div class="col-sm-4 col-md-2 hide inner-col" id="">
+                                <a class="back-to-top btn bg-info-subtle border-dark btn-sm w-100" href=""></a>
+                            </div>
+                            <div class="col-sm-4 col-md-8 hide" id="">
+                                <a class="back-to-top btn bg-danger-subtle border-dark btn-sm w-100" href="">Hide</a>
+                            </div>
+                            <div class="col-sm-4 col-md-2 text-end full-width">
+                                <a class="back-to-top btn bg-info-subtle border-dark btn-sm w-100" href="#top">Top</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- NEXT -->
+    <div class="container title bottom-title">
+        <div class="row align-items-start">            
+            <h2 id="next">Next</h2>
+
+            <!-- ready for next? -->
+            <div class="col-sm-6" id="">
+                <div class="card shadow">
+                    <div class="card-body">
+                        <h3>Next</h3>
+                        <h4 class="formula">Ready to move on?</h4>
+                        
+                        <!-- Show / Hide / Top -->
+                        <div class="container card-buttons">
+                            <div class="row align-items-start">
+                                <div class="col-sm-4 code-buttons" id="">
+                                    <a class="back-to-top btn bg-success-subtle border-dark btn-sm w-100" onclick="nextPage()">Yes</a>
+                                </div>
+                                <div class="col-sm-4 code-buttons" id="">
+                                    <a class="back-to-top btn bg-danger-subtle border-dark btn-sm w-100" onclick="revisePage2()">No</a>
+                                </div>
+                                <div class="col-sm-4 text-end">
+                                    <a class="back-to-top btn bg-info-subtle border-dark btn-sm w-100" href="#top">Top</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- revision -->
+            <div class="col-sm-6" id="go-to">
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="container-fluid bottom fixed-bottom position-sticky" id="footer-height">
+        <div class="container">
+            <div class="row align-items-start">            
+                <div class="col-4" id="">
+                    <ul class="bottom-nav left">
+                        <li class="bottom-nav-items"><a href="#strings">Strings</a></li>
+                        <!--<li class="bottom-nav-items"><a href="#let">let</a></li>
+                        <li class="bottom-nav-items"><a href="#const">const</a></li>
+                        <li class="bottom-nav-items"><a href="#data-types">Data Types</a></li>-->
+                    </ul>
+                </div>
+                <div class="col-4" id="">
+                    <ul class="bottom-nav middle">
+                        <!--<li class="bottom-nav-items"><a href="#type-conversion">Type Conversion</a></li>
+                        <li class="bottom-nav-items"><a href="#math">Math</a></li>
+                        <li class="bottom-nav-items"><a href="#user-input">User Input</a></li>
+                        <li class="bottom-nav-items"><a href="#using-constants">Using Constants</a></li>-->
+                    </ul>
+                </div>
+                <div class="col-4" id="">
+                    <ul class="bottom-nav right">
+                        <!--<li class="bottom-nav-items"><a href="#counters">Counters</a></li>
+                        <li class="bottom-nav-items"><a href="#random">Random</a></li>
+                        <li class="bottom-nav-items"><a href="#if">If</a></li>
+                        <li class="bottom-nav-items"><a href="#next">Next</a></li>-->
+                    </ul>
+                </div>
+                <div class="col-md-4" id="">
+                    <ul class="bottom-nav left middle-bottom">
+                        <li class="bottom-nav-items"><a href="/index.html">Previous Page</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4" id="">
+                    <ul class="bottom-nav middle middle-bottom">
+                        <li class="bottom-nav-items"><a href="#top">Top</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4" id="">
+                    <ul class="bottom-nav right middle-bottom">
+                        <li class="bottom-nav-items"><a href="/page3.html">Next Page</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="scripts/index.js"></script>
+    <script src="scripts/page2.js"></script>
+    <!-- data -->
+    <script src="scripts/strings/stringMethods.js"></script>
+
+    <!-- outside  scriipts -->
+    
+    <!--<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" 
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" 
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <!-- original script!!! --
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" 
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" 
+        crossorigin="anonymous">
+    </script>
+    <!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>-->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+</body>
+</html>
