@@ -35,7 +35,7 @@ function nextPage() {
         <div class="container card-buttons">
             <div class="row align-items-start">
                 <div class="col-sm-4 code-buttons" id="">
-                    <a class="back-to-top btn bg-success-subtle border-dark btn-sm w-100" href="/page2.html">Next Page</a>
+                    <a class="back-to-top btn bg-success-subtle border-dark btn-sm w-100" href="page2.html">Next Page</a>
                 </div>
                 <div class="col-sm-4 hide code-buttons" id="">
                     <a class="back-to-top btn bg-warning-subtle border-dark btn-sm w-100" id="">Hide</a>
