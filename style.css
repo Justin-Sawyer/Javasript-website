@@ -226,6 +226,7 @@ pre {
 
 footer {
     border-top: 0.075rem solid black;
+    padding-bottom: 1em;
   }
 
 .count-tally  {
@@ -322,16 +323,11 @@ footer {
 @media screen and (max-width: 991px) {
     .dropdown-menu {
         background-color: blanchedalmond;
-        /*display: none;*/
     }
 
     .dropdown-menu .dropdown-items {
         display: block;
     }
-
-    /*.nav-item > .dropdown-menu {
-        display: none;
-    }*/
 }
 
 @media only screen and (max-width: 1399px) {
@@ -385,5 +381,14 @@ footer {
 @media only screen and (max-width: 436px) {
     .bottom-nav {
        font-size: 0.8em;
+    }
+}
+
+@media only screen and (max-height: 767px) {
+    /*.bottom-nav {
+       font-size: 0.8em;
+    }*/
+    .position-sticky {
+        position: static !important;
     }
 }
