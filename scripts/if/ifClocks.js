@@ -264,7 +264,7 @@ function currentTime() {
     };
 
     if (hh == 00) {
-        hour.innerHTML = `Oh Oh:`; 
+        hour.innerHTML = `Midnight:`; 
         currentMinute();
         currentSecond();
     } else if (hh == 01) {
@@ -632,7 +632,7 @@ function currentTime() {
     };
 
     if (hh == 00) {
-        hour.innerHTML = "Oh Oh:"; 
+        hour.innerHTML = "Midnight:"; 
         currentMinute();
         currentSecond();
     } else if (hh == 01) {
@@ -792,7 +792,7 @@ function currentTime() {
 
     function currentTernaryHour() {
         if (hh == 00) {
-            ternaryHour.textContent = `Oh Oh:`; 
+            ternaryHour.textContent = `Midnight:`; 
         } else if (hh == 01) {
             ternaryHour.textContent = `Oh One:`; 
         } else if (hh == 02) {
@@ -1115,7 +1115,7 @@ function currentTime() {
 
     function currentTernaryHour() {
         if (hh == 00) {
-            ternaryHour.textContent = "Oh Oh:"; 
+            ternaryHour.textContent = "Midnight:"; 
         } else if (hh == 01) {
             ternaryHour.textContent = "Oh One:"; 
         } else if (hh == 02) {
