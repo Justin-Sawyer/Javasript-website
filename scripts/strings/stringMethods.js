@@ -6,21 +6,29 @@ let charAtPosition = document.getElementById("charAt-position");
 let indexOfPosition = document.getElementById("indexOf-position");
 let lastIndexOfPosition = document.getElementById("lastIndexOf-position");
 let trimPosition = document.getElementById("trim-position");
+let startsWithBoolean = document.getElementById("startsWith-boolean");
+let endsWithBoolean = document.getElementById("endsWith-boolean");
 
 let charAt = document.getElementById("charAt");
 let indexOf = document.getElementById("indexOf");
 let lastIndexOf = document.getElementById("lastIndexOf");
 let trim = document.getElementById("trim");
+let startsWith = document.getElementById("startsWith");
+let endsWith = document.getElementById("endsWith");
 
 let hideCharAtMethod = document.getElementById("hide-charAt-method");
 let hideindexOfMethod = document.getElementById("hide-indexOf-method");
 let hideLastIndexOfMethod = document.getElementById("hide-lastIndexOf-method");
 let hideTrimMethod = document.getElementById("hide-trim-method");
+let hideStartsWithMethod = document.getElementById("hide-startsWith-method");
+let hideEndsWithMethod = document.getElementById("hide-endsWith-method");
 
 let hideTrimValue = document.getElementById("hide-trim-value");
 let hideIndexOfValue = document.getElementById("hide-indexOf-value");
 let hideLastIndexOfValue = document.getElementById("hide-lastIndexOf-value");
 let hideCharAtValue = document.getElementById("hide-charAt-value");
+let hideStartsWithValue = document.getElementById("hide-startsWith-value");
+let hideEndsWithValue = document.getElementById("hide-endsWith-value");
 
 let hideIndexOfPlace = document.getElementById("hide-indexOf-place");
 let hideLastIndexOfPlace = document.getElementById("hide-lastIndexOf-place");
@@ -30,17 +38,22 @@ let hideCharAtExplanation = document.getElementById("hide-charAt-explanation");
 let hideIndexOfExplanation = document.getElementById("hide-indexOf-explanation");
 let hideLastIndexOfExplanation = document.getElementById("hide-lastIndexOf-explanation");
 let hideTrimExplanation = document.getElementById("hide-trim-explanation");
+let hideStartsWithExplanation = document.getElementById("hide-startsWith-explanation");
+let hideEndsWithExplanation = document.getElementById("hide-endsWith-explanation");
 
 let charAtCode = document.getElementById("charAt-code");
 let indexOfCode = document.getElementById("indexOf-code");
 let lastIndexOfCode = document.getElementById("lastIndexOf-code");
 let trimCode = document.getElementById("trim-code");
+let startsWithCode = document.getElementById("startsWith-code");
+let endsWithCode = document.getElementById("endsWith-code");
 
 let letterMethods;
 let indexOfMethod;
 let lastIndexOfMethod;
 let trimMethod;
 let panagram;
+let inputValue;
 let originalValue;
 
 let firstIndex;
@@ -52,6 +65,8 @@ let countCharAt;
 let countedIndexOf = document.getElementById("counted-indexOf");
 let countedLastIndexOf = document.getElementById("counted-lastIndexOf");
 let countedCharAt = document.getElementById("counted-charAt");
+let start;
+let end;
 
 function hideCharAt() {
     hideCharAtMethod.setAttribute ("style", "visibility: hidden; height: 0;");
@@ -117,6 +132,20 @@ function hideTrim() {
     hideTrimValue.setAttribute ("style", "visibility: hidden; height: 0;");
     hideTrimExplanation.setAttribute ("style", "visibility: hidden; height: 0;");
     trimCode.setAttribute ("style", "visibility: hidden; height: 0;");
+};
+
+function hideStartsWith() {
+    hideStartsWithMethod.setAttribute ("style", "visibility: hidden; height: 0;");
+    hideStartsWithValue.setAttribute ("style", "visibility: hidden; height: 0;");
+    hideStartsWithExplanation.setAttribute ("style", "visibility: hidden; height: 0;");
+    startsWithCode.setAttribute ("style", "visibility: hidden; height: 0;");
+};
+
+function hideEndsWith() {
+    hideEndsWithMethod.setAttribute ("style", "visibility: hidden; height: 0;");
+    hideEndsWithValue.setAttribute ("style", "visibility: hidden; height: 0;");
+    hideEndsWithExplanation.setAttribute ("style", "visibility: hidden; height: 0;");
+    endsWithCode.setAttribute ("style", "visibility: hidden; height: 0;");
 };
 
 function whiteSpaceAdded() {
@@ -323,8 +352,50 @@ ${spanElement}ABCDEFGHIJKLMNOPQRSTUVWXYZ${closeSpanElement}`;
     };
 };
 
+function stringStartsWith() {
+    start = panagram.startsWith(`${inputValue}`);
+    panagram = panagrams.textContent;
+    let inputValueLength = inputValue.length;
+    let panagramStart = panagram.slice(0, inputValueLength);
+    if (start) {
+        startsWithBoolean.innerHTML = `<span class="green">True</span>`;
+        hideStartsWithValue.setAttribute(
+            "style", "visibility: hidden; height: 0;"
+        );
+    } else {
+        startsWithBoolean.innerHTML = `<span class="red">False</span>`;
+        hideStartsWithValue.setAttribute(
+            "style", "visibility: visible; height: 100%;"
+        );
+        startsWith.innerHTML = `"<span class="string">${panagramStart}</span>"`;
+    };
+    
+    startsWithCode.innerHTML = `string.startsWith("<span class="result string">${inputValue}</span>");`
+};
+
+function stringEndsWith() {
+    end = panagram.endsWith(`${inputValue}`);
+    panagram = panagrams.textContent;
+    let inputValueLength = inputValue.length;
+    let panagramEnd = panagram.slice(-inputValueLength);
+    if (end) {
+        endsWithBoolean.innerHTML = `<span class="green">True</span>`;
+        hideEndsWithValue.setAttribute(
+            "style", "visibility: hidden; height: 0;"
+        );
+    } else {
+        endsWithBoolean.innerHTML = `<span class="red">False</span>`;
+        hideEndsWithValue.setAttribute(
+            "style", "visibility: visible; height: 100%;"
+        );
+        endsWith.innerHTML = `"<span class="string">${panagramEnd}</span>"`;
+    };
+    
+    endsWithCode.innerHTML = `string.startsWith("<span class="result string">${inputValue}</span>");`
+};
+
 function indexOfStringValue() {
-    firstIndex = panagram.indexOf(letterMethods)
+    firstIndex = panagram.indexOf(letterMethods);
     indexOfPosition.innerHTML = `"<span class="result string">${letterMethods}</span>"`;
     indexOf.innerHTML = `<span class="result green">${firstIndex}</span>`;
     countIndexNumber = firstIndex + 1;
@@ -400,6 +471,8 @@ function ifEmptyString() {
         whiteSpaceAdded();
         //hideCharAt();
         charAtIsNaN();
+        stringStartsWith();
+        stringEndsWith();
     } else {
         originalValue = letterMethods;
         letterMethods = letterMethods.trim();
@@ -410,6 +483,8 @@ function ifEmptyString() {
             tooManyLastIndexOf();
             trimmedValue();
             charAtValue();
+            stringStartsWith();
+            stringEndsWith();
         } else {
             if (letterMethods == "") {
                 letterMethods = " ";
@@ -417,11 +492,15 @@ function ifEmptyString() {
                 lastIndexOfStringValue();
                 trimmedValue();
                 hideCharAt();
+                stringStartsWith();
+                stringEndsWith();
             } else {
                 indexOfStringValue();
                 lastIndexOfStringValue();
                 trimmedValue();
                 charAtValue();
+                stringStartsWith();
+                stringEndsWith();
             };
         };
     };
@@ -439,7 +518,8 @@ function getInputValue() {
         hideIndexOf();
         hideLastIndexOf();
         hideTrim();
-
+        hideStartsWith();
+        hideEndsWith();
     } else {
         // clear warning text
         document.getElementById("number-of-letters").innerHTML = "";
@@ -458,6 +538,7 @@ stringMethods.onclick = function() {
     getInputValue();
     upperCaseString();
     lowerCaseString();
+    //stringStartsWith();
 
     stringMethodsDiv.scrollIntoView({ behavior: "smooth", block: "start" });
     
