@@ -16,23 +16,23 @@ function currentTime() {
     var t = setTimeout(function(){ currentTime() }, 1000); 
 
     function currentMinute() {
-        if (mm == 01) {
+        if (mm == 1) {
             minute.textContent = `Oh One:`; 
-        } else if (mm == 02) {
+        } else if (mm == 2) {
             minute.innerHTML = `Oh Two:`; 
-        } else if (mm == 03) {
+        } else if (mm == 3) {
             minute.innerHTML = `Oh Three:`; 
-        } else if (mm == 04) {
+        } else if (mm == 4) {
             minute.textContent = `Oh Four:`; 
-        } else if (mm == 05) {
+        } else if (mm == 5) {
             minute.innerHTML = `Oh Five:`; 
-        } else if (mm == 06) {
+        } else if (mm == 6) {
             minute.innerHTML = `Oh Six:`; 
-        } else if (mm == 07) {
+        } else if (mm == 7) {
             minute.textContent = `Oh Seven:`; 
-        } else if (mm == 08) {
+        } else if (mm == 8) {
             minute.innerHTML = `Oh Eight:`; 
-        } else if (mm == 09) {
+        } else if (mm == 9) {
             minute.innerHTML = `Oh Nine:`; 
         } else if (mm == 10) {
             minute.textContent = `Ten:`; 
@@ -140,23 +140,23 @@ function currentTime() {
     };
 
     function currentSecond() {
-        if (ss == 01) {
+        if (ss == 1) {
             second.textContent = `Oh One`; 
-        } else if (ss == 02) {
+        } else if (ss == 2) {
             second.innerHTML = `Oh Two`; 
-        } else if (ss == 03) {
+        } else if (ss == 3) {
             second.innerHTML = `Oh Three`; 
-        } else if (ss == 04) {
+        } else if (ss == 4) {
             second.textContent = `Oh Four`; 
-        } else if (ss == 05) {
+        } else if (ss == 5) {
             second.innerHTML = `Oh Five`; 
-        } else if (ss == 06) {
+        } else if (ss == 6) {
             second.innerHTML = `Oh Six`; 
-        } else if (ss == 07) {
+        } else if (ss == 7) {
             second.textContent = `Oh Seven`; 
-        } else if (ss == 08) {
+        } else if (ss == 8) {
             second.innerHTML = `Oh Eight`; 
-        } else if (ss == 09) {
+        } else if (ss == 9) {
             second.innerHTML = `Oh Nine`; 
         } else if (ss == 10) {
             second.textContent = `Ten`; 
@@ -263,43 +263,43 @@ function currentTime() {
         };
     };
 
-    if (hh == 00) {
+    if (hh == 0) {
         hour.innerHTML = `Midnight:`; 
         currentMinute();
         currentSecond();
-    } else if (hh == 01) {
+    } else if (hh == 1) {
         hour.innerHTML = `Oh One:`; 
         currentMinute();
         currentSecond();
-    } else if (hh == 02) {
+    } else if (hh == 2) {
         hour.innerHTML = `Oh Two:`; 
         currentMinute();
         currentSecond();
-    } else if (hh == 03) {
+    } else if (hh == 3) {
         hour.innerHTML = `Oh Three:`; 
         currentMinute();
         currentSecond();
-    } else if (hh == 04) {
+    } else if (hh == 4) {
         hour.innerHTML = `Oh Four:`; 
         currentMinute();
         currentSecond();
-    } else if (hh == 05) {
+    } else if (hh == 5) {
         hour.innerHTML = `Oh Five:`; 
         currentMinute();
         currentSecond();
-    } else if (hh == 06) {
+    } else if (hh == 6) {
         hour.innerHTML = `Oh Six:`; 
         currentMinute();
         currentSecond();
-    } else if (hh == 07) {
+    } else if (hh == 7) {
         hour.innerHTML = `Oh Seven:`; 
         currentMinute();
         currentSecond();
-    } else if (hh == 08) {
+    } else if (hh == 8) {
         hour.innerHTML = `Oh Eight:`; 
         currentMinute();
         currentSecond();
-    } else if (hh == 09) {
+    } else if (hh == 9) {
         hour.innerHTML = `Oh Nine:`; 
         currentMinute();
         currentSecond();
@@ -384,23 +384,23 @@ function currentTime() {
     var t = setTimeout(function(){ currentTime() }, 1000); 
 
     function currentMinute() {
-        if (mm == 01) {
+        if (mm == 1) {
             minute.textContent = "Oh One:"; 
-        } else if (mm == 02) {
+        } else if (mm == 2) {
             minute.innerHTML = "Oh Two:"; 
-        } else if (mm == 03) {
+        } else if (mm == 3) {
             minute.innerHTML = "Oh Three:"; 
-        } else if (mm == 04) {
+        } else if (mm == 4) {
             minute.textContent = "Oh Four:"; 
-        } else if (mm == 05) {
+        } else if (mm == 5) {
             minute.innerHTML = "Oh Five:"; 
-        } else if (mm == 06) {
+        } else if (mm == 6) {
             minute.innerHTML = "Oh Six:"; 
-        } else if (mm == 07) {
+        } else if (mm == 7) {
             minute.textContent = "Oh Seven:"; 
-        } else if (mm == 08) {
+        } else if (mm == 8) {
             minute.innerHTML = "Oh Eight:"; 
-        } else if (mm == 09) {
+        } else if (mm == 9) {
             minute.innerHTML = "Oh Nine:"; 
         } else if (mm == 10) {
             minute.textContent = "Ten:"; 
@@ -508,23 +508,23 @@ function currentTime() {
     };
 
     function currentSecond() {
-        if (ss == 01) {
+        if (ss == 1) {
             second.textContent = "Oh One"; 
-        } else if (ss == 02) {
+        } else if (ss == 2) {
             second.innerHTML = "Oh Two"; 
-        } else if (ss == 03) {
+        } else if (ss == 3) {
             second.innerHTML = "Oh Three"; 
-        } else if (ss == 04) {
+        } else if (ss == 4) {
             second.textContent = "Oh Four"; 
-        } else if (ss == 05) {
+        } else if (ss == 5) {
             second.innerHTML = "Oh Five"; 
-        } else if (ss == 06) {
+        } else if (ss == 6) {
             second.innerHTML = "Oh Six"; 
-        } else if (ss == 07) {
+        } else if (ss == 7) {
             second.textContent = "Oh Seven"; 
-        } else if (ss == 08) {
+        } else if (ss == 8) {
             second.innerHTML = "Oh Eight"; 
-        } else if (ss == 09) {
+        } else if (ss == 9) {
             second.innerHTML = "Oh Nine"; 
         } else if (ss == 10) {
             second.textContent = "Ten"; 
@@ -631,43 +631,43 @@ function currentTime() {
         };
     };
 
-    if (hh == 00) {
+    if (hh == 0) {
         hour.innerHTML = "Midnight:"; 
         currentMinute();
         currentSecond();
-    } else if (hh == 01) {
+    } else if (hh == 1) {
         hour.innerHTML = "Oh One:"; 
         currentMinute();
         currentSecond();
-    } else if (hh == 02) {
+    } else if (hh == 2) {
         hour.innerHTML = "Oh Two:"; 
         currentMinute();
         currentSecond();
-    } else if (hh == 03) {
+    } else if (hh == 3) {
         hour.innerHTML = "Oh Three:"; 
         currentMinute();
         currentSecond();
-    } else if (hh == 04) {
+    } else if (hh == 4) {
         hour.innerHTML = "Oh Four:"; 
         currentMinute();
         currentSecond();
-    } else if (hh == 05) {
+    } else if (hh == 5) {
         hour.innerHTML = "Oh Five:"; 
         currentMinute();
         currentSecond();
-    } else if (hh == 06) {
+    } else if (hh == 6) {
         hour.innerHTML = "Oh Six:"; 
         currentMinute();
         currentSecond();
-    } else if (hh == 07) {
+    } else if (hh == 7) {
         hour.innerHTML = "Oh Seven:"; 
         currentMinute();
         currentSecond();
-    } else if (hh == 08) {
+    } else if (hh == 8) {
         hour.innerHTML = "Oh Eight:"; 
         currentMinute();
         currentSecond();
-    } else if (hh == 09) {
+    } else if (hh == 9) {
         hour.innerHTML = "Oh Nine:"; 
         currentMinute();
         currentSecond();
@@ -791,25 +791,25 @@ function currentTime() {
     const ternarySecond = document.getElementById("ternary-second");
 
     function currentTernaryHour() {
-        if (hh == 00) {
+        if (hh == 0) {
             ternaryHour.textContent = `Midnight:`; 
-        } else if (hh == 01) {
+        } else if (hh == 1) {
             ternaryHour.textContent = `Oh One:`; 
-        } else if (hh == 02) {
+        } else if (hh == 2) {
             ternaryHour.innerHTML = `Oh Two:`; 
-        } else if (hh == 03) {
+        } else if (hh == 3) {
             ternaryHour.innerHTML = `Oh Three:`; 
-        } else if (hh == 04) {
+        } else if (hh == 4) {
             ternaryHour.textContent = `Oh Four:`; 
-        } else if (hh == 05) {
+        } else if (hh == 5) {
             ternaryHour.innerHTML = `Oh Five:`; 
-        } else if (hh == 06) {
+        } else if (hh == 6) {
             ternaryHour.innerHTML = `Oh Six:`; 
-        } else if (hh == 07) {
+        } else if (hh == 7) {
             ternaryHour.textContent = `Oh Seven:`; 
-        } else if (hh == 08) {
+        } else if (hh == 8) {
             ternaryHour.innerHTML = `Oh Eight:`; 
-        } else if (hh == 09) {
+        } else if (hh == 9) {
             ternaryHour.innerHTML = `Oh Nine:`; 
         } else if (hh == 10) {
             ternaryHour.textContent = `Ten:`; 
@@ -845,23 +845,23 @@ function currentTime() {
     };
 
     function currentTernaryMinute() {
-        if (mm == 01) {
+        if (mm == 1) {
             ternaryMinute.textContent = `Oh One:`; 
-        } else if (mm == 02) {
+        } else if (mm == 2) {
             ternaryMinute.innerHTML = `Oh Two:`; 
-        } else if (mm == 03) {
+        } else if (mm == 3) {
             ternaryMinute.innerHTML = `Oh Three:`; 
-        } else if (mm == 04) {
+        } else if (mm == 4) {
             ternaryMinute.textContent = `Oh Four:`; 
-        } else if (mm == 05) {
+        } else if (mm == 5) {
             ternaryMinute.innerHTML = `Oh Five:`; 
-        } else if (mm == 06) {
+        } else if (mm == 6) {
             ternaryMinute.innerHTML = `Oh Six:`; 
-        } else if (mm == 07) {
+        } else if (mm == 7) {
             ternaryMinute.textContent = `Oh Seven:`; 
-        } else if (mm == 08) {
+        } else if (mm == 8) {
             ternaryMinute.innerHTML = `Oh Eight:`; 
-        } else if (mm == 09) {
+        } else if (mm == 9) {
             ternaryMinute.innerHTML = `Oh Nine:`; 
         } else if (mm == 10) {
             ternaryMinute.textContent = `Ten:`; 
@@ -969,23 +969,23 @@ function currentTime() {
     };
 
     function currentTernarySecond() {
-        if (ss == 01) {
+        if (ss == 1) {
             ternarySecond.textContent = `Oh One`; 
-        } else if (ss == 02) {
+        } else if (ss == 2) {
             ternarySecond.innerHTML = `Oh Two`; 
-        } else if (ss == 03) {
+        } else if (ss == 3) {
             ternarySecond.innerHTML = `Oh Three`; 
-        } else if (ss == 04) {
+        } else if (ss == 4) {
             ternarySecond.textContent = `Oh Four`; 
-        } else if (ss == 05) {
+        } else if (ss == 5) {
             ternarySecond.innerHTML = `Oh Five`; 
-        } else if (ss == 06) {
+        } else if (ss == 6) {
             ternarySecond.innerHTML = `Oh Six`; 
-        } else if (ss == 07) {
+        } else if (ss == 7) {
             ternarySecond.textContent = `Oh Seven`; 
-        } else if (ss == 08) {
+        } else if (ss == 8) {
             ternarySecond.innerHTML = `Oh Eight`; 
-        } else if (ss == 09) {
+        } else if (ss == 9) {
             ternarySecond.innerHTML = `Oh Nine`; 
         } else if (ss == 10) {
             ternarySecond.textContent = `Ten`; 
@@ -1114,25 +1114,25 @@ function currentTime() {
     var t = setTimeout(function(){ currentTime() }, 1000);
 
     function currentTernaryHour() {
-        if (hh == 00) {
+        if (hh == 0) {
             ternaryHour.textContent = "Midnight:"; 
-        } else if (hh == 01) {
+        } else if (hh == 1) {
             ternaryHour.textContent = "Oh One:"; 
-        } else if (hh == 02) {
+        } else if (hh == 2) {
             ternaryHour.innerHTML = "Oh Two:"; 
-        } else if (hh == 03) {
+        } else if (hh == 3) {
             ternaryHour.innerHTML = "Oh Three:"; 
-        } else if (hh == 04) {
+        } else if (hh == 4) {
             ternaryHour.textContent = "Oh Four:"; 
-        } else if (hh == 05) {
+        } else if (hh == 5) {
             ternaryHour.innerHTML = "Oh Five:"; 
-        } else if (hh == 06) {
+        } else if (hh == 6) {
             ternaryHour.innerHTML = "Oh Six:"; 
-        } else if (hh == 07) {
+        } else if (hh == 7) {
             ternaryHour.textContent = "Oh Seven:"; 
-        } else if (hh == 08) {
+        } else if (hh == 8) {
             ternaryHour.innerHTML = "Oh Eight:"; 
-        } else if (hh == 09) {
+        } else if (hh == 9) {
             ternaryHour.innerHTML = "Oh Nine:"; 
         } else if (hh == 10) {
             ternaryHour.textContent = "Ten:"; 
@@ -1168,23 +1168,23 @@ function currentTime() {
     };
 
     function currentTernaryMinute() {
-        if (mm == 01) {
+        if (mm == 1) {
             ternaryMinute.textContent = "Oh One:"; 
-        } else if (mm == 02) {
+        } else if (mm == 2) {
             ternaryMinute.innerHTML = "Oh Two:"; 
-        } else if (mm == 03) {
+        } else if (mm == 3) {
             ternaryMinute.innerHTML = "Oh Three:"; 
-        } else if (mm == 04) {
+        } else if (mm == 4) {
             ternaryMinute.textContent = "Oh Four:"; 
-        } else if (mm == 05) {
+        } else if (mm == 5) {
             ternaryMinute.innerHTML = "Oh Five:"; 
-        } else if (mm == 06) {
+        } else if (mm == 6) {
             ternaryMinute.innerHTML = "Oh Six:"; 
-        } else if (mm == 07) {
+        } else if (mm == 7) {
             ternaryMinute.textContent = "Oh Seven:"; 
-        } else if (mm == 08) {
+        } else if (mm == 8) {
             ternaryMinute.innerHTML = "Oh Eight:"; 
-        } else if (mm == 09) {
+        } else if (mm == 9) {
             ternaryMinute.innerHTML = "Oh Nine:"; 
         } else if (mm == 10) {
             ternaryMinute.textContent = "Ten:"; 
@@ -1292,23 +1292,23 @@ function currentTime() {
     };
 
     function currentTernarySecond() {
-        if (ss == 01) {
+        if (ss == 1) {
             ternarySecond.textContent = "Oh One"; 
-        } else if (ss == 02) {
+        } else if (ss == 2) {
             ternarySecond.innerHTML = "Oh Two"; 
-        } else if (ss == 03) {
+        } else if (ss == 3) {
             ternarySecond.innerHTML = "Oh Three"; 
-        } else if (ss == 04) {
+        } else if (ss == 4) {
             ternarySecond.textContent = "Oh Four"; 
-        } else if (ss == 05) {
+        } else if (ss == 5) {
             ternarySecond.innerHTML = "Oh Five"; 
-        } else if (ss == 06) {
+        } else if (ss == 6) {
             ternarySecond.innerHTML = "Oh Six"; 
-        } else if (ss == 07) {
+        } else if (ss == 7) {
             ternarySecond.textContent = "Oh Seven"; 
-        } else if (ss == 08) {
+        } else if (ss == 8) {
             ternarySecond.innerHTML = "Oh Eight"; 
-        } else if (ss == 09) {
+        } else if (ss == 9) {
             ternarySecond.innerHTML = "Oh Nine"; 
         } else if (ss == 10) {
             ternarySecond.textContent = "Ten"; 

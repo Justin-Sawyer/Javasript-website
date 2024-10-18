@@ -17,34 +17,34 @@ function currentSwitchTime() {
 
     function currentSwitchSecond() {
         switch (ss) {
-            case 00:
+            case 0:
                 switchSecond.textContent = `Oh Oh`; 
                 break;
-            case 01:
+            case 1:
                 switchSecond.textContent = `Oh One`; 
                 break;
-            case 02:
+            case 2:
                 switchSecond.innerHTML = `Oh Two`; 
                 break;
-            case 03:
+            case 3:
                 switchSecond.innerHTML = `Oh Three`; 
                 break;
-            case 04:
+            case 4:
                 switchSecond.textContent = `Oh Four`; 
                 break;
-            case 05:
+            case 5:
                 switchSecond.innerHTML = `Oh Five`; 
                 break;
-            case 06:
+            case 6:
                 switchSecond.innerHTML = `Oh Six`; 
                 break;
-            case 07:
+            case 7:
                 switchSecond.textContent = `Oh Seven`; 
                 break;
-            case 08:
+            case 8:
                 switchSecond.innerHTML = `Oh Eight`; 
                 break;
-            case 09:
+            case 9:
                 switchSecond.innerHTML = `Oh Nine`;
                 break;
             case 10:
@@ -205,34 +205,34 @@ function currentSwitchTime() {
     
     function currentSwitchMinute() {
         switch (mm) {
-            case 00:
+            case 0:
                 switchMinute.textContent = `Hundred:`; 
                 break;
-            case 01:
+            case 1:
                 switchMinute.textContent = `Oh One:`; 
                 break;
-            case 02:
+            case 2:
                 switchMinute.innerHTML = `Oh Two:`; 
                 break;
-            case 03:
+            case 3:
                 switchMinute.innerHTML = `Oh Three:`; 
                 break;
             case 4:
                 switchMinute.textContent = `Oh Four:`; 
                 break;
-            case 05:
+            case 5:
                 switchMinute.innerHTML = `Oh Five:`; 
                 break;
-            case 06:
+            case 6:
                 switchMinute.innerHTML = `Oh Six:`; 
                 break;
-            case 07:
+            case 7:
                 switchMinute.textContent = `Oh Seven:`; 
                 break;
-            case 08:
+            case 8:
                 switchMinute.innerHTML = `Oh Eight:`; 
                 break;
-            case 09:
+            case 9:
                 switchMinute.innerHTML = `Oh Nine:`; 
                 break;
             case 10:
@@ -394,34 +394,34 @@ function currentSwitchTime() {
 
     function currentSwitchHour() {
         switch (hh) {
-            case 00:
+            case 0:
                 switchHour.textContent = `Midnight:`; 
                 break;
-            case 01:
+            case 1:
                 switchHour.textContent = `Oh One:`; 
                 break;
-            case 02:
+            case 2:
                 switchHour.innerHTML = `Oh Two:`; 
                 break;
-            case 03:
+            case 3:
                 switchHour.innerHTML = `Oh Three:`; 
                 break;
-            case 04:
+            case 4:
                 switchHour.textContent = `Oh Four:`; 
                 break;
-            case 05:
+            case 5:
                 switchHour.innerHTML = `Oh Five:`; 
                 break;
-            case 06:
+            case 6:
                 switchHour.innerHTML = `Oh Six:`; 
                 break;
-            case 07:
+            case 7:
                 switchHour.textContent = `Oh Seven:`; 
                 break;
-            case 08:
+            case 8:
                 switchHour.innerHTML = `Oh Eight:`; 
                 break;
-            case 09:
+            case 9:
                 switchHour.innerHTML = `Oh Nine`;
                 break;
             case 10:
@@ -493,34 +493,34 @@ function currentSwitchTime() {
 
     function currentSwitchSecond() {
         switch (ss) {
-            case 00:
+            case 0:
                 switchSecond.textContent = "Oh Oh"; 
                 break;
-            case 01:
+            case 1:
                 switchSecond.textContent = "Oh One"; 
                 break;
-            case 02:
+            case 2:
                 switchSecond.innerHTML = "Oh Two"; 
                 break;
-            case 03:
+            case 3:
                 switchSecond.innerHTML = "Oh Three"; 
                 break;
-            case 04:
+            case 4:
                 switchSecond.textContent = "Oh Four"; 
                 break;
-            case 05:
+            case 5:
                 switchSecond.innerHTML = "Oh Five"; 
                 break;
-            case 06:
+            case 6:
                 switchSecond.innerHTML = "Oh Six"; 
                 break;
-            case 07:
+            case 7:
                 switchSecond.textContent = "Oh Seven"; 
                 break;
-            case 08:
+            case 8:
                 switchSecond.innerHTML = "Oh Eight"; 
                 break;
-            case 09:
+            case 9:
                 switchSecond.innerHTML = "Oh Nine";
                 break;
             case 10:
@@ -681,34 +681,34 @@ function currentSwitchTime() {
     
     function currentSwitchMinute() {
         switch (mm) {
-            case 00:
+            case 0:
                 switchMinute.textContent = "Hundred:"; 
                 break;
-            case 01:
+            case 1:
                 switchMinute.textContent = "Oh One:"; 
                 break;
-            case 02:
+            case 2:
                 switchMinute.innerHTML = "Oh Two:"; 
                 break;
-            case 03:
+            case 3:
                 switchMinute.innerHTML = "Oh Three:"; 
                 break;
             case 4:
                 switchMinute.textContent = "Oh Four:"; 
                 break;
-            case 05:
+            case 5:
                 switchMinute.innerHTML = "Oh Five:"; 
                 break;
-            case 06:
+            case 6:
                 switchMinute.innerHTML = "Oh Six:"; 
                 break;
-            case 07:
+            case 7:
                 switchMinute.textContent = "Oh Seven:"; 
                 break;
-            case 08:
+            case 8:
                 switchMinute.innerHTML = "Oh Eight:"; 
                 break;
-            case 09:
+            case 9:
                 switchMinute.innerHTML = "Oh Nine:"; 
                 break;
             case 10:
@@ -870,34 +870,34 @@ function currentSwitchTime() {
 
     function currentSwitchHour() {
         switch (hh) {
-            case 00:
+            case 0:
                 switchHour.textContent = "Midnight:"; 
                 break;
-            case 01:
+            case 1:
                 switchHour.textContent = "Oh One:"; 
                 break;
-            case 02:
+            case 2:
                 switchHour.innerHTML = "Oh Two:"; 
                 break;
-            case 03:
+            case 3:
                 switchHour.innerHTML = "Oh Three:"; 
                 break;
-            case 04:
+            case 4:
                 switchHour.textContent = "Oh Four:"; 
                 break;
-            case 05:
+            case 5:
                 switchHour.innerHTML = "Oh Five:"; 
                 break;
-            case 06:
+            case 6:
                 switchHour.innerHTML = "Oh Six:"; 
                 break;
-            case 07:
+            case 7:
                 switchHour.textContent = "Oh Seven:"; 
                 break;
-            case 08:
+            case 8:
                 switchHour.innerHTML = "Oh Eight:"; 
                 break;
-            case 09:
+            case 9:
                 switchHour.innerHTML = "Oh Nine";
                 break;
             case 10:
