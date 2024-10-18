@@ -391,7 +391,7 @@ function stringEndsWith() {
         endsWith.innerHTML = `"<span class="string">${panagramEnd}</span>"`;
     };
     
-    endsWithCode.innerHTML = `string.startsWith("<span class="result string">${inputValue}</span>");`
+    endsWithCode.innerHTML = `string.endsWith("<span class="result string">${inputValue}</span>");`
 };
 
 function indexOfStringValue() {
