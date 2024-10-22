@@ -496,7 +496,6 @@ function ifEmptyString() {
         lastIndexOfStringValue();
         nothingToTrim();
         whiteSpaceAdded();
-        //hideCharAt();
         charAtIsNaN();
         stringStartsWith();
         stringEndsWith();
@@ -570,7 +569,6 @@ stringMethods.onclick = function() {
     getInputValue();
     upperCaseString();
     lowerCaseString();
-    //stringStartsWith();
 
     stringMethodsDiv.scrollIntoView({ behavior: "smooth", block: "start" });
     
