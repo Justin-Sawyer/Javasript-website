@@ -33,6 +33,20 @@ let hideTrimValue = document.getElementById("hide-trim-value");
 let hideTrimExplanation = document.getElementById("hide-trim-explanation");
 let trimCode = document.getElementById("trim-code");
 
+let trimStartPosition = document.getElementById("trimStart-position");
+let trimStart = document.getElementById("trimStart");
+let hideTrimStartMethod = document.getElementById("hide-trimStart-method");
+let hideTrimStartValue = document.getElementById("hide-trimStart-value");
+let hideTrimStartExplanation = document.getElementById("hide-trimStart-explanation");
+let trimStartCode = document.getElementById("trimStart-code");
+
+let trimEndPosition = document.getElementById("trimEnd-position");
+let trimEnd = document.getElementById("trimEnd");
+let hideTrimEndMethod = document.getElementById("hide-trimEnd-method");
+let hideTrimEndValue = document.getElementById("hide-trimEnd-value");
+let hideTrimEndExplanation = document.getElementById("hide-trimEnd-explanation");
+let trimEndCode = document.getElementById("trimEnd-code");
+
 let startsWithBoolean = document.getElementById("startsWith-boolean");
 let startsWith = document.getElementById("startsWith");
 let hideStartsWithMethod = document.getElementById("hide-startsWith-method");
@@ -56,6 +70,8 @@ let letterMethods;
 let indexOfMethod;
 let lastIndexOfMethod;
 let trimMethod;
+let trimStartMethod;
+let trimEndMethod;
 let panagram;
 let inputValue;
 let originalValue;
@@ -132,12 +148,43 @@ function nothingToTrim() {
 <span class="string">// trim() trims white space from the start or end</span>`;
 };
 
+function nothingToTrimStart() {
+    hideTrimStartMethod.setAttribute ("style", "visibility: hidden; height: 0;");
+    hideTrimStartValue.setAttribute ("style", "visibility: hidden; height: 0;");
+    hideTrimStartExplanation.setAttribute ("style", "visibility: hidden; height: 0;");
+    trimStartCode.innerHTML = `<span class="red">// Add some white space before:</span>
+<span class="string">// trimStart() trims white space from the start</span>`;
+};
+
+function nothingToTrimEnd() {
+    hideTrimEndMethod.setAttribute ("style", "visibility: hidden; height: 0;");
+    hideTrimEndValue.setAttribute ("style", "visibility: hidden; height: 0;");
+    hideTrimEndExplanation.setAttribute ("style", "visibility: hidden; height: 0;");
+    trimEndCode.innerHTML = `<span class="red">// Add some white space after:</span>
+<span class="string">// trimEnd() trims white space from the end</span>`;
+};
+
 function hideTrim() {
     hideTrimMethod.setAttribute ("style", "visibility: hidden; height: 0;");
     hideTrimValue.setAttribute ("style", "visibility: hidden; height: 0;");
     hideTrimExplanation.setAttribute ("style", "visibility: hidden; height: 0;");
     trimCode.setAttribute ("style", "visibility: hidden; height: 0;");
 };
+
+function hideTrimStart() {
+    hideTrimStartMethod.setAttribute ("style", "visibility: hidden; height: 0;");
+    hideTrimStartValue.setAttribute ("style", "visibility: hidden; height: 0;");
+    hideTrimStartExplanation.setAttribute ("style", "visibility: hidden; height: 0;");
+    trimStartCode.setAttribute ("style", "visibility: hidden; height: 0;");
+};
+
+function hideTrimEnd() {
+    hideTrimEndMethod.setAttribute ("style", "visibility: hidden; height: 0;");
+    hideTrimEndValue.setAttribute ("style", "visibility: hidden; height: 0;");
+    hideTrimEndExplanation.setAttribute ("style", "visibility: hidden; height: 0;");
+    trimEndCode.setAttribute ("style", "visibility: hidden; height: 0;");
+};
+
 
 function hideStartsWith() {
     hideStartsWithMethod.setAttribute ("style", "visibility: hidden; height: 0;");
@@ -164,6 +211,18 @@ function whiteSpaceAdded() {
     hideTrimValue.setAttribute ("style", "visibility: hidden; height: 0;");
     hideTrimExplanation.setAttribute ("style", "visibility: hidden; height: 0;");
     trimCode.innerHTML = `<span class="string">// White space has been added back</span>`;
+
+
+    hideTrimStartMethod.setAttribute ("style", "visibility: hidden; height: 0;");
+    hideTrimStartValue.setAttribute ("style", "visibility: hidden; height: 0;");
+    hideTrimStartExplanation.setAttribute ("style", "visibility: hidden; height: 0;");
+    trimStartCode.innerHTML = `<span class="string">// White space has been added back</span>`;
+
+
+    hideTrimEndMethod.setAttribute ("style", "visibility: hidden; height: 0;");
+    hideTrimEndValue.setAttribute ("style", "visibility: hidden; height: 0;");
+    hideTrimEndExplanation.setAttribute ("style", "visibility: hidden; height: 0;");
+    trimEndCode.innerHTML = `<span class="string">// White space has been added back</span>`;
 };
 
 function trimmedValue() {
@@ -175,6 +234,30 @@ function trimmedValue() {
 string.trim("<span class="result string">${originalValue}</span>")`;
         trimPosition.innerHTML = `"<span class="result string">${originalValue}</span>"`;
         trim.innerHTML = `"<span class="result string">${newTrimmedValue}</span>"`;
+    };    
+};
+
+function trimmedStartValue() {
+    let newTrimmedStartValue = originalValue.trimStart();
+    if (originalValue == newTrimmedStartValue) {
+        nothingToTrimStart();
+    } else {
+        trimStartCode.innerHTML = `<span class="string">// strings are zero indexed</span>
+string.trimStart("<span class="result string">${originalValue}</span>")`;
+        trimStartPosition.innerHTML = `"<span class="result string">${originalValue}</span>"`;
+        trimStart.innerHTML = `"<span class="result string">${newTrimmedStartValue}</span>"`;
+    };    
+};
+
+function trimmedEndValue() {
+    let newTrimmedEndValue = originalValue.trimEnd();
+    if (originalValue == newTrimmedEndValue) {
+        nothingToTrimEnd();
+    } else {
+        trimEndCode.innerHTML = `<span class="string">// strings are zero indexed</span>
+string.trimEnd("<span class="result string">${originalValue}</span>")`;
+        trimEndPosition.innerHTML = `"<span class="result string">${originalValue}</span>"`;
+        trimEnd.innerHTML = `"<span class="result string">${newTrimmedEndValue}</span>"`;
     };    
 };
 
@@ -495,6 +578,8 @@ function ifEmptyString() {
         indexOfStringValue();
         lastIndexOfStringValue();
         nothingToTrim();
+        //nothingToTrimStart();
+        //nothingToTrimEnd();
         whiteSpaceAdded();
         charAtIsNaN();
         stringStartsWith();
@@ -509,6 +594,8 @@ function ifEmptyString() {
             tooManyIndexOf();
             tooManyLastIndexOf();
             trimmedValue();
+            trimmedStartValue();
+            trimmedEndValue();
             charAtValue();
             stringStartsWith();
             stringEndsWith();
@@ -519,6 +606,8 @@ function ifEmptyString() {
                 indexOfStringValue();
                 lastIndexOfStringValue();
                 trimmedValue();
+                trimmedStartValue();
+                trimmedEndValue();
                 hideCharAt();
                 stringStartsWith();
                 stringEndsWith();
@@ -527,6 +616,8 @@ function ifEmptyString() {
                 indexOfStringValue();
                 lastIndexOfStringValue();
                 trimmedValue();
+                trimmedStartValue();
+                trimmedEndValue();
                 charAtValue();
                 stringStartsWith();
                 stringEndsWith();
@@ -548,6 +639,8 @@ function getInputValue() {
         hideIndexOf();
         hideLastIndexOf();
         hideTrim();
+        hideTrimStart();
+        hideTrimEnd();
         hideStartsWith();
         hideEndsWith();
         hideIncludes();
