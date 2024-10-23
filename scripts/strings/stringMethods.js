@@ -577,9 +577,7 @@ function ifEmptyString() {
     if (inputValue == " ") {
         indexOfStringValue();
         lastIndexOfStringValue();
-        nothingToTrim();
-        //nothingToTrimStart();
-        //nothingToTrimEnd();
+        // nothingToTrim();
         whiteSpaceAdded();
         charAtIsNaN();
         stringStartsWith();
