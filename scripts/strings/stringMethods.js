@@ -1,4 +1,6 @@
 const stringMethodsDiv = document.getElementById("string-methods");
+const toUpperCaseDiv = document.getElementById("toUpperCase-div");
+const toLowerCaseDiv = document.getElementById("toLowerCase-div");
 const stringMethods = document.getElementById("letterMethods");
 const panagrams = document.getElementById("panagrams");
 
@@ -149,21 +151,21 @@ function nothingToTrim() {
     hideTrimMethod.setAttribute ("style", "visibility: hidden; height: 0;");
     hideTrimValue.setAttribute ("style", "visibility: hidden; height: 0;");
     hideTrimExplanation.setAttribute ("style", "visibility: hidden; height: 0;");
-    trimCode.innerHTML = `<span class="red">// Add some white space before or after</span>`;
+    trimCode.innerHTML = `<span class="red">// Enter white space before or after</span>`;
 };
 
 function nothingToTrimStart() {
     hideTrimStartMethod.setAttribute ("style", "visibility: hidden; height: 0;");
     hideTrimStartValue.setAttribute ("style", "visibility: hidden; height: 0;");
     hideTrimStartExplanation.setAttribute ("style", "visibility: hidden; height: 0;");
-    trimStartCode.innerHTML = `<span class="red">// Add some white space before</span>`;
+    trimStartCode.innerHTML = `<span class="red">// Enter white space before</span>`;
 };
 
 function nothingToTrimEnd() {
     hideTrimEndMethod.setAttribute ("style", "visibility: hidden; height: 0;");
     hideTrimEndValue.setAttribute ("style", "visibility: hidden; height: 0;");
     hideTrimEndExplanation.setAttribute ("style", "visibility: hidden; height: 0;");
-    trimEndCode.innerHTML = `<span class="red">// Add some white space after</span>`;
+    trimEndCode.innerHTML = `<span class="red">// Enter white space after</span>`;
 };
 
 function hideTrim() {
@@ -314,7 +316,7 @@ ABCDEFGHIJKLMNOPQRSTUVWXYZ`;
             "style", "visibility: visible; height: 100%;"
         );
 
-        stringMethodsDiv.scrollIntoView({ behavior: "smooth", block: "start" });
+        toUpperCaseDiv.scrollIntoView({ behavior: "smooth", block: "start" });
     };
 
     hideToUpperCaseChangesButton.onclick = function() {
@@ -334,7 +336,7 @@ ABCDEFGHIJKLMNOPQRSTUVWXYZ`;
             "style", "visibility: visible; height: 100%;"
         );
 
-        stringMethodsDiv.scrollIntoView({ behavior: "smooth", block: "start" });
+        toUpperCaseDiv.scrollIntoView({ behavior: "smooth", block: "start" });
     };
 };
 
@@ -406,7 +408,7 @@ ${spanElement}ABCDEFGHIJKLMNOPQRSTUVWXYZ${closeSpanElement}`;
             "style", "visibility: visible; height: 100%;"
         );
 
-        stringMethodsDiv.scrollIntoView({ behavior: "smooth", block: "start" });
+        toLowerCaseDiv.scrollIntoView({ behavior: "smooth", block: "start" });
     };
 
     hideToLowerCaseChangesButton.onclick = function() {
@@ -426,7 +428,7 @@ ${spanElement}ABCDEFGHIJKLMNOPQRSTUVWXYZ${closeSpanElement}`;
             "style", "visibility: visible; height: 100%;"
         );
 
-        stringMethodsDiv.scrollIntoView({ behavior: "smooth", block: "start" });
+        toLowerCaseDiv.scrollIntoView({ behavior: "smooth", block: "start" });
     };
 };
 
