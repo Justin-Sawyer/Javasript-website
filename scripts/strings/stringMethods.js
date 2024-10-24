@@ -102,8 +102,7 @@ function charAtIsNaN() {
     hideCharAtValue.setAttribute ("style", "visibility: hidden; height: 0;");
     hideCharAtPlace.setAttribute ("style", "visibility: hidden; height: 0;");
     hideCharAtExplanation.setAttribute ("style", "visibility: hidden; height: 0;");
-    charAtCode.innerHTML = `<span class="red">// Enter a number between 0 and 200:</span>
-<span class="string">// charAt() retrieves the character at index #</span>`;
+    charAtCode.innerHTML = `<span class="red">// Enter a number between 0 and 200</span>`;
 };
 
 function tooManyIndexOf() {
@@ -111,8 +110,7 @@ function tooManyIndexOf() {
     hideIndexOfValue.setAttribute ("style", "visibility: hidden; height: 0;");
     hideIndexOfPlace.setAttribute ("style", "visibility: hidden; height: 0;");
     hideIndexOfExplanation.setAttribute ("style", "visibility: hidden; height: 0;");
-    indexOfCode.innerHTML = `<span class="red">// Enter just one character:</span>
-<span class="string">// indexOf() retrieves index of one character</span>`;
+    indexOfCode.innerHTML = `<span class="red">// Enter just one character</span>`;
 };
 
 function hideIndexOf() {
@@ -128,8 +126,7 @@ function tooManyLastIndexOf() {
     hideLastIndexOfValue.setAttribute ("style", "visibility: hidden; height: 0;");
     hideLastIndexOfPlace.setAttribute ("style", "visibility: hidden; height: 0;");
     hideLastIndexOfExplanation.setAttribute ("style", "visibility: hidden; height: 0;");
-    lastIndexOfCode.innerHTML = `<span class="red">// Enter just one character:</span>
-<span class="string">// lastIndexOf() retrieves last index of one character</span>`;
+    lastIndexOfCode.innerHTML = `<span class="red">// Enter just one character</span>`;
 };
 
 function hideLastIndexOf() {
@@ -144,24 +141,21 @@ function nothingToTrim() {
     hideTrimMethod.setAttribute ("style", "visibility: hidden; height: 0;");
     hideTrimValue.setAttribute ("style", "visibility: hidden; height: 0;");
     hideTrimExplanation.setAttribute ("style", "visibility: hidden; height: 0;");
-    trimCode.innerHTML = `<span class="red">// Add some white space before or after:</span>
-<span class="string">// trim() trims white space from the start or end</span>`;
+    trimCode.innerHTML = `<span class="red">// Add some white space before or after</span>`;
 };
 
 function nothingToTrimStart() {
     hideTrimStartMethod.setAttribute ("style", "visibility: hidden; height: 0;");
     hideTrimStartValue.setAttribute ("style", "visibility: hidden; height: 0;");
     hideTrimStartExplanation.setAttribute ("style", "visibility: hidden; height: 0;");
-    trimStartCode.innerHTML = `<span class="red">// Add some white space before:</span>
-<span class="string">// trimStart() trims white space from the start</span>`;
+    trimStartCode.innerHTML = `<span class="red">// Add some white space before</span>`;
 };
 
 function nothingToTrimEnd() {
     hideTrimEndMethod.setAttribute ("style", "visibility: hidden; height: 0;");
     hideTrimEndValue.setAttribute ("style", "visibility: hidden; height: 0;");
     hideTrimEndExplanation.setAttribute ("style", "visibility: hidden; height: 0;");
-    trimEndCode.innerHTML = `<span class="red">// Add some white space after:</span>
-<span class="string">// trimEnd() trims white space from the end</span>`;
+    trimEndCode.innerHTML = `<span class="red">// Add some white space after</span>`;
 };
 
 function hideTrim() {
@@ -206,32 +200,14 @@ function hideIncludes() {
     includesCode.setAttribute ("style", "visibility: hidden; height: 0;");
 };
 
-function whiteSpaceAdded() {
-    hideTrimMethod.setAttribute ("style", "visibility: hidden; height: 0;");
-    hideTrimValue.setAttribute ("style", "visibility: hidden; height: 0;");
-    hideTrimExplanation.setAttribute ("style", "visibility: hidden; height: 0;");
-    trimCode.innerHTML = `<span class="string">// White space has been added back</span>`;
-
-
-    hideTrimStartMethod.setAttribute ("style", "visibility: hidden; height: 0;");
-    hideTrimStartValue.setAttribute ("style", "visibility: hidden; height: 0;");
-    hideTrimStartExplanation.setAttribute ("style", "visibility: hidden; height: 0;");
-    trimStartCode.innerHTML = `<span class="string">// White space has been added back</span>`;
-
-
-    hideTrimEndMethod.setAttribute ("style", "visibility: hidden; height: 0;");
-    hideTrimEndValue.setAttribute ("style", "visibility: hidden; height: 0;");
-    hideTrimEndExplanation.setAttribute ("style", "visibility: hidden; height: 0;");
-    trimEndCode.innerHTML = `<span class="string">// White space has been added back</span>`;
-};
-
 function trimmedValue() {
+    console.log(`letter: "${letterMethods}"`)
+    console.log(`original: "${originalValue}"`)
     let newTrimmedValue = originalValue.trim();
     if (originalValue == newTrimmedValue) {
         nothingToTrim();
     } else {
-        trimCode.innerHTML = `<span class="string">// strings are zero indexed</span>
-string.trim("<span class="result string">${originalValue}</span>")`;
+        trimCode.innerHTML = `string.trim("<span class="result string">${originalValue}</span>")`;
         trimPosition.innerHTML = `"<span class="result string">${originalValue}</span>"`;
         trim.innerHTML = `"<span class="result string">${newTrimmedValue}</span>"`;
     };    
@@ -242,8 +218,7 @@ function trimmedStartValue() {
     if (originalValue == newTrimmedStartValue) {
         nothingToTrimStart();
     } else {
-        trimStartCode.innerHTML = `<span class="string">// strings are zero indexed</span>
-string.trimStart("<span class="result string">${originalValue}</span>")`;
+        trimStartCode.innerHTML = `string.trimStart("<span class="result string">${originalValue}</span>")`;
         trimStartPosition.innerHTML = `"<span class="result string">${originalValue}</span>"`;
         trimStart.innerHTML = `"<span class="result string">${newTrimmedStartValue}</span>"`;
     };    
@@ -254,8 +229,7 @@ function trimmedEndValue() {
     if (originalValue == newTrimmedEndValue) {
         nothingToTrimEnd();
     } else {
-        trimEndCode.innerHTML = `<span class="string">// strings are zero indexed</span>
-string.trimEnd("<span class="result string">${originalValue}</span>")`;
+        trimEndCode.innerHTML = `string.trimEnd("<span class="result string">${originalValue}</span>")`;
         trimEndPosition.innerHTML = `"<span class="result string">${originalValue}</span>"`;
         trimEnd.innerHTML = `"<span class="result string">${newTrimmedEndValue}</span>"`;
     };    
@@ -545,9 +519,11 @@ string.lastIndexOf("<span class="result string">${letterMethods}</span>");`
 };
 
 function charAtValue() {
-    char = panagram.charAt(letterMethods)
+    char = panagram.charAt(letterMethods);
     letterMethods = Number(letterMethods);
-    if (Number.isNaN(letterMethods) || (letterMethods > 200) || (letterMethods < 0)) {
+    console.log(`char: "${letterMethods}"`)
+    console.log(`orig: "${originalValue}"`)
+    if (Number.isNaN(letterMethods) || (letterMethods > 200) || (letterMethods < 0) || (letterMethods == "")) {
         charAtIsNaN();
     } else {
         charAtPosition.innerHTML = `<span class="result green">${letterMethods}</span>`;
@@ -564,8 +540,14 @@ function charAtValue() {
         } else {
             document.getElementById("st-nd-rd-th-charAt").textContent = "th";
         };
-        charAtCode.innerHTML = `<span class="string">// strings are zero indexed</span>
+        if (originalValue.includes(" ")) {
+            charAtCode.innerHTML = `<span class="string">// converting string to Number trims value
+// strings are zero indexed</span>
 string.charAt(<span class="result green">${letterMethods}</span>);`
+        } else {
+            charAtCode.innerHTML = `<span class="string">// strings are zero indexed</span>
+string.charAt(<span class="result green">${letterMethods}</span>);`
+        };
     };
 };
 
@@ -575,17 +557,18 @@ function ifEmptyString() {
     inputValue = letterMethods;
     panagram = panagrams.textContent;
     if (inputValue == " ") {
+        originalValue = letterMethods;
         indexOfStringValue();
         lastIndexOfStringValue();
-        // nothingToTrim();
-        whiteSpaceAdded();
+        trimmedValue();
+        trimmedStartValue();
+        trimmedEndValue();
         charAtIsNaN();
         stringStartsWith();
         stringEndsWith();
         stringIncludes()
     } else {
         originalValue = letterMethods;
-        letterMethods = letterMethods.trim();
         
         if (letterMethods.length > 1) {
             // warning text
@@ -606,7 +589,7 @@ function ifEmptyString() {
                 trimmedValue();
                 trimmedStartValue();
                 trimmedEndValue();
-                hideCharAt();
+                charAtIsNaN();
                 stringStartsWith();
                 stringEndsWith();
                 stringIncludes()
@@ -626,9 +609,12 @@ function ifEmptyString() {
 };
 
 function getInputValue() {
+    letterMethods = "";
     letterMethods = document.getElementById("letter-methods").value;
+    console.log(`letter: "${typeof letterMethods}"`)
     // see whether value has been entered
     inputValue = letterMethods;
+    console.log(`letter: "${typeof inputValue}"`)
     if (!inputValue) {
         // warning text
         document.getElementById("number-of-letters").innerHTML = `<span class="result red">Please enter something!</span>`;

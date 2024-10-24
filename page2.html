@@ -69,307 +69,307 @@
     <!-- CARD ARTCILES -->
 
     <!-- STRINGS -->
-<div class="container title">
-    <div class="row align-items-start">
-        <h2 id="strings">Strings</h2>
+    <div class="container title">
+        <div class="row align-items-start">
+            <h2 id="strings">Strings</h2>
 
-        <!-- String Methods -->
-        <div class="col-md-12" id="string-methods">
-            <div class="card shadow">
-                <div class="card-body">
-                    <h3 id="string-methods">string.methods()</h3>
-                    <div class="container">
-                        <div class="row align-items-start">
-                            
-                            <!-- 12 -->
-                            <div class="col-md-12 inner-col">
-                                <h4>Single parameters</h4>
-                            </div>
-
-                            <!-- the panagram string -->
-                            <div class="col-md-4 inner-col">
-                                <h5 class="formula" id="panagrams">ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz 0123456789 #@&é"'(§è!çà)-°_^¨$€£*ù%`<>?,.;/:+= #@&é"'(§è!çà)-°_^¨$€£*ù%`<>?,.;/:+= abcdefghijklmnopqrstuvwxyz 0123456789 ABCDEFGHIJKLMNOPQRSTUVWXYZ</h5>
-                                <input class="form-control form-control-sm" type="text" placeholder="Enter character(s)" aria-label=".form-control-sm example" id="letter-methods">
-                                <div class="btn-group w-100" role="group" aria-label="Basic example">
-                                    <button class="btn bg-primary-subtle border-dark btn-sm group-button" id="letterMethods">Submit Character(s)</button>
+            <!-- String Methods -->
+            <div class="col-md-12" id="string-methods">
+                <div class="card shadow">
+                    <div class="card-body">
+                        <h3 id="string-methods">string.methods()</h3>
+                        <div class="container">
+                            <div class="row align-items-start">
+                                
+                                <!-- 12 -->
+                                <div class="col-md-12 inner-col">
+                                    <h4>Single parameters</h4>
                                 </div>
-                                <p id="number-of-letters"></p>
-                            </div>
- 
-                            <!-- string.toUpperCase() -->                           
-                            <div class="col-md-4 inner-col">
-                                <h5>string.toUpperCase()</h5>
-                                <pre class="hide-string-methods shadow" id="toUpperCase-code"></pre>
-                                <!-- Show / Hide -->
-                                <div class="container">
-                                    <div class="row justify-content-between">
-                                        <div class="col-sm-6 hide left-button" id="show-toUpperCase-code">
-                                            <a class="back-to-top btn bg-info-subtle border-dark btn-sm w-100" id="show-toUpperCase-code-button">Show Changes</a>
+
+                                <!-- the panagram string -->
+                                <div class="col-md-4 inner-col">
+                                    <h5 class="formula" id="panagrams">ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz 0123456789 #@&é"'(§è!çà)-°_^¨$€£*ù%`<>?,.;/:+= #@&é"'(§è!çà)-°_^¨$€£*ù%`<>?,.;/:+= abcdefghijklmnopqrstuvwxyz 0123456789 ABCDEFGHIJKLMNOPQRSTUVWXYZ</h5>
+                                    <input class="form-control form-control-sm" type="text" placeholder="Enter character(s)" aria-label=".form-control-sm example" id="letter-methods">
+                                    <div class="btn-group w-100" role="group" aria-label="Basic example">
+                                        <button class="btn bg-primary-subtle border-dark btn-sm group-button" id="letterMethods">Submit Character(s)</button>
+                                    </div>
+                                    <p id="number-of-letters"></p>
+                                </div>
+    
+                                <!-- string.toUpperCase() -->                           
+                                <div class="col-md-4 inner-col">
+                                    <h5>string.toUpperCase()</h5>
+                                    <pre class="hide-string-methods shadow" id="toUpperCase-code"></pre>
+                                    <!-- Show / Hide -->
+                                    <div class="container">
+                                        <div class="row justify-content-between">
+                                            <div class="col-sm-6 hide left-button" id="show-toUpperCase-code">
+                                                <a class="back-to-top btn bg-info-subtle border-dark btn-sm w-100" id="show-toUpperCase-code-button">Show Changes</a>
+                                            </div>
+                                            <div class="col-sm-6 hide right-button" id="hide-toUpperCase-code">
+                                                <a class="back-to-top btn bg-danger-subtle border-dark btn-sm w-100" id="hide-toUpperCase-code-button">Hide changes</a>
+                                            </div>
                                         </div>
-                                        <div class="col-sm-6 hide right-button" id="hide-toUpperCase-code">
-                                            <a class="back-to-top btn bg-danger-subtle border-dark btn-sm w-100" id="hide-toUpperCase-code-button">Hide changes</a>
+                                    </div>
+                                    <div class="container hide" id="hide-toUpperCase-container">
+                                        <div class="row align-items-start" id="">
+                                            <div class="col inner-col" id="">
+                                                <span id="changed-toUpperCase"></span>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="container hide" id="hide-toUpperCase-container">
-                                    <div class="row align-items-start" id="">
-                                        <div class="col inner-col" id="">
-                                            <span id="changed-toUpperCase"></span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
 
-                            <!-- string.toLowerCase() -->
-                            <div class="col-md-4 inner-col">
-                                <h5>string.toLowerCase()</h5>
-                                <pre class="hide-string-methods shadow" id="toLowerCase-code"></pre>
-                                <!-- Show / Hide -->
-                                <div class="container">
-                                    <div class="row align-items-start">
-                                        <div class="col-sm-6 hide left-button" id="show-toLowerCase-code">
-                                            <a class="back-to-top btn bg-info-subtle border-dark btn-sm w-100" id="show-toLowerCase-code-button">Show Changes</a>
-                                        </div>
-                                        <div class="col-sm-6 hide right-button" id="hide-toLowerCase-code">
-                                            <a class="back-to-top btn bg-danger-subtle border-dark btn-sm w-100" id="hide-toLowerCase-code-button">Hide Changes</a>
+                                <!-- string.toLowerCase() -->
+                                <div class="col-md-4 inner-col">
+                                    <h5>string.toLowerCase()</h5>
+                                    <pre class="hide-string-methods shadow" id="toLowerCase-code"></pre>
+                                    <!-- Show / Hide -->
+                                    <div class="container">
+                                        <div class="row align-items-start">
+                                            <div class="col-sm-6 hide left-button" id="show-toLowerCase-code">
+                                                <a class="back-to-top btn bg-info-subtle border-dark btn-sm w-100" id="show-toLowerCase-code-button">Show Changes</a>
+                                            </div>
+                                            <div class="col-sm-6 hide right-button" id="hide-toLowerCase-code">
+                                                <a class="back-to-top btn bg-danger-subtle border-dark btn-sm w-100" id="hide-toLowerCase-code-button">Hide Changes</a>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="container hide" id="hide-toLowerCase-container">
-                                    <div class="row align-items-start" id="">
-                                        <div class="col inner-col" id="">
-                                            <span id="changed-toLowerCase"></span>
+                                    <div class="container hide" id="hide-toLowerCase-container">
+                                        <div class="row align-items-start" id="">
+                                            <div class="col inner-col" id="">
+                                                <span id="changed-toLowerCase"></span>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="container">
+                        <div class="container">
+                            <div class="row align-items-start">
+                                
+                                <!-- string.trim() -->
+                                <div class="col-md-4 inner-col"> 
+                                    <h5>string.trim()</h5>
+                                    <pre class="hide-string-methods shadow" id="trim-code"></pre>
+                                    <table class="hide-table" id="string-trim-table">
+                                        <tr class="hide-string-methods" id="hide-trim-method">
+                                            <th>Original value </th>
+                                            <th>:</th>
+                                            <th id="trim-position"></th>
+                                        </tr>
+                                        <tr class="hide-string-methods" id="hide-trim-value">
+                                            <th>Trimmed value </th>
+                                            <th>:</th>
+                                            <th id="trim"></th>
+                                        </tr>
+                                    </table>
+                                    <p class="hide-string-methods" id="hide-trim-explanation">trim() removes white space from the <span class="result">start or end</span></p>
+                                </div>
+                                
+                                <!-- string.trimStart() -->
+                                <div class="col-md-4 inner-col">
+                                    <h5>string.trimStart()</h5>
+                                    <pre class="hide-string-methods shadow" id="trimStart-code"></pre>
+                                    <table class="hide-table" id="string-trimStart-table">
+                                        <tr class="hide-string-methods" id="hide-trimStart-method">
+                                            <th>Original value </th>
+                                            <th>:</th>
+                                            <th id="trimStart-position"></th>
+                                        </tr>
+                                        <tr class="hide-string-methods" id="hide-trimStart-value">
+                                            <th>Trimmed value </th>
+                                            <th>:</th>
+                                            <th id="trimStart"></th>
+                                        </tr>
+                                    </table>
+                                    <p class="hide-string-methods" id="hide-trimStart-explanation">trimStart() removes white space from the <span class="result">start</span></p>
+                                </div>
+
+                                <!-- string.trimEnd() -->
+                                <div class="col-md-4 inner-col">
+                                    <h5>string.trimEnd()</h5>
+                                    <pre class="hide-string-methods shadow" id="trimEnd-code"></pre>
+                                    <table class="hide-table" id="string-trimEnd-table">
+                                        <tr class="hide-string-methods" id="hide-trimEnd-method">
+                                            <th>Original value </th>
+                                            <th>:</th>
+                                            <th id="trimEnd-position"></th>
+                                        </tr>
+                                        <tr class="hide-string-methods" id="hide-trimEnd-value">
+                                            <th>Trimmed value </th>
+                                            <th>:</th>
+                                            <th id="trimEnd"></th>
+                                        </tr>
+                                    </table>
+                                    <p class="hide-string-methods" id="hide-trimEnd-explanation">trim() removes white space from the <span class="result">end</span></p>
+                                </div>
+                            </div>
+                        </div>
+                                
+                        <div class="container">
+                            <div class="row align-items-start">
+                                    
+                                <!-- string.charAt() -->
+                                <div class="col-md-4 inner-col">  
+                                    <h5>string.charAt()</h5>
+                                    <pre class="hide-string-methods shadow" id="charAt-code"></pre>
+                                    <table class="hide-table" id="charAt-table">
+                                        <tr class="hide-string-methods" id="hide-charAt-method">
+                                            <th>Index # </th>
+                                            <th>:</th>
+                                            <th id="charAt-position"></th>
+                                        </tr>
+                                        <tr class="hide-string-methods" id="hide-charAt-value">
+                                            <th>Character </th>
+                                            <th>:</th>
+                                            <th id="charAt"></th>
+                                        </tr>
+                                        <tr class="hide-string-methods" id="hide-charAt-place">
+                                            <th>Position </th>
+                                            <th>:</th>
+                                            <th class="red"><span id="counted-charAt"></span><span id="st-nd-rd-th-charAt"></span></th>
+                                        </tr>
+                                    </table>
+                                    <p class="hide-string-methods" id="hide-charAt-explanation">charAt() retrieves the string character at the given index number</p>                                
+                                </div>
+
+                                <!-- string.indexOf() -->
+                                <div class="col-md-4 inner-col"> 
+                                    <h5>string.indexOf()</h5>
+                                    <pre class="hide-string-methods shadow" id="indexOf-code"></pre>
+                                    <table class="hide-table" id="string-indexOf-table">
+                                        <tr class="hide-string-methods" id="hide-indexOf-method">
+                                            <th>Character to index </th>
+                                            <th>:</th>
+                                            <th id="indexOf-position"></th>
+                                        </tr>
+                                        <tr class="hide-string-methods" id="hide-indexOf-value">
+                                            <th>Index # </th>
+                                            <th>:</th>
+                                            <th id="indexOf"></th>
+                                        </tr>
+                                        <tr class="hide-string-methods" id="hide-indexOf-place">
+                                            <th>Position </th>
+                                            <th>:</th>
+                                            <th class="red"><span id="counted-indexOf"></span><span id="st-nd-rd-th-indexOf"></span></th>
+                                        </tr>
+                                    </table>
+                                    <p class="hide-string-methods" id="hide-indexOf-explanation">indexOf() retrieves the <span class="result">FIRST</span> zero-indexed occurence of a character</p>
+                                </div>
+
+                                <!-- string.lastIndexOf() -->
+                                <div class="col-md-4 inner-col"> 
+                                    <h5>string.lastIndexOf()</h5>
+                                    <pre class="hide-string-methods shadow" id="lastIndexOf-code"></pre>
+                                    <table class="hide-table" id="string-lastIndexOf-table">
+                                        <tr class="hide-string-methods" id="hide-lastIndexOf-method">
+                                            <th>Character to index </th>
+                                            <th>:</th>
+                                            <th id="lastIndexOf-position"></th>
+                                        </tr>
+                                        <tr class="hide-string-methods" id="hide-lastIndexOf-value">
+                                            <th>Last Index # </th>
+                                            <th>:</th>
+                                            <th id="lastIndexOf"></th>
+                                        </tr>
+                                        <tr class="hide-string-methods" id="hide-lastIndexOf-place">
+                                            <th>Position </th>
+                                            <th>:</th>
+                                            <th class="red"><span id="counted-lastIndexOf"></span><span id="st-nd-rd-th-lastIndexOf"></span></th>
+                                        </tr>
+                                    </table>
+                                    <p class="hide-string-methods" id="hide-lastIndexOf-explanation">lastIndexOf() retrieves the <span class="result">LAST</span> zero-indexed occurence of a character</p>           
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="container">
+                            <div class="row align-items-start">
+
+                                <!-- string.startsWith() -->
+                                <div class="col-md-4 inner-col">
+                                    <h5>string.startsWith()</h5>
+                                    <pre class="hide-string-methods shadow" id="startsWith-code"></pre>
+                                    <table class="hide-table" id="string-startsWith-table">
+                                        <tr class="hide-string-methods" id="hide-startsWith-method">
+                                            <th>True or False? </th>
+                                            <th>:</th>
+                                            <th id="startsWith-boolean"></th>
+                                        </tr>
+                                        <tr class="hide-string-methods" id="hide-startsWith-value">
+                                            <th>Starts with </th>
+                                            <th>:</th>
+                                            <th id="startsWith"></th>
+                                        </tr>
+                                    </table>
+                                    <p class="hide-string-methods" id="hide-startsWith-explanation">startsWith() returns true until the <span class="result">START</span> of the string differs</p>
+                                </div>
+
+                                <!-- string.endsWith() -->
+                                <div class="col-md-4 inner-col">
+                                    <h5>string.endsWith()</h5>
+                                    <pre class="hide-string-methods shadow" id="endsWith-code"></pre>
+                                    <table class="hide-table" id="string-endsWith-table">
+                                        <tr class="hide-string-methods" id="hide-endsWith-method">
+                                            <th>True or False? </th>
+                                            <th>:</th>
+                                            <th id="endsWith-boolean"></th>
+                                        </tr>
+                                        <tr class="hide-string-methods" id="hide-endsWith-value">
+                                            <th>Ends with </th>
+                                            <th>:</th>
+                                            <th id="endsWith"></th>
+                                        </tr>
+                                    </table>
+                                    <p class="hide-string-methods" id="hide-endsWith-explanation">endsWith() returns true until the <span class="result">END</span> of the string differs</p>   
+                                </div>
+
+                                <!-- string.includes() -->
+                                <div class="col-md-4 inner-col">
+                                    <h5>string.includes()</h5>
+                                    <pre class="hide-string-methods shadow" id="includes-code"></pre>
+                                    <table class="hide-table" id="string-includes-table">
+                                        <tr class="hide-string-methods" id="hide-includes-method">
+                                            <th>True or False? </th>
+                                            <th>:</th>
+                                            <th id="includes-boolean"></th>
+                                        </tr>
+                                    </table>
+                                    <p class="hide-string-methods" id="hide-includes-explanation">includes() returns true if the string includes the input</p> 
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="container">
+                            <div class="row align-items-start">
+
+                                <div class="col-md-12 inner-col border-top">
+                                    <h4>Two or more parameters</h4>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--<div class="container">-->                        
+                        <!-- Show / Hide / Top -->
                         <div class="row align-items-start">
-                            
-                            <!-- string.trim() -->
-                            <div class="col-md-4 inner-col"> 
-                                <h5>string.trim()</h5>
-                                <pre class="hide-string-methods shadow" id="trim-code"></pre>
-                                <table class="hide-table" id="string-trim-table">
-                                    <tr class="hide-string-methods" id="hide-trim-method">
-                                        <th>Original value </th>
-                                        <th>:</th>
-                                        <th id="trim-position"></th>
-                                    </tr>
-                                    <tr class="hide-string-methods" id="hide-trim-value">
-                                        <th>Trimmed value </th>
-                                        <th>:</th>
-                                        <th id="trim"></th>
-                                    </tr>
-                                </table>
-                                <p class="hide-string-methods" id="hide-trim-explanation">trim() removes white space from the start or end</p>
+                            <div class="col-sm-4 col-md-2 hide inner-col" id="">
+                                <a class="back-to-top btn bg-info-subtle border-dark btn-sm w-100" href=""></a>
                             </div>
-                            
-                            <!-- string.trimStart() -->
-                            <div class="col-md-4 inner-col">
-                                <h5>string.trimStart()</h5>
-                                <pre class="hide-string-methods shadow" id="trimStart-code"></pre>
-                                <table class="hide-table" id="string-trimStart-table">
-                                    <tr class="hide-string-methods" id="hide-trimStart-method">
-                                        <th>Original value </th>
-                                        <th>:</th>
-                                        <th id="trimStart-position"></th>
-                                    </tr>
-                                    <tr class="hide-string-methods" id="hide-trimStart-value">
-                                        <th>Trimmed value </th>
-                                        <th>:</th>
-                                        <th id="trimStart"></th>
-                                    </tr>
-                                </table>
-                                <p class="hide-string-methods" id="hide-trimStart-explanation">trimStart() removes white space from the start</p>
+                            <div class="col-sm-4 col-md-8 hide" id="">
+                                <a class="back-to-top btn bg-danger-subtle border-dark btn-sm w-100" href="">Hide</a>
                             </div>
-
-                            <!-- string.trimEnd() -->
-                            <div class="col-md-4 inner-col">
-                                <h5>string.trimEnd()</h5>
-                                <pre class="hide-string-methods shadow" id="trimEnd-code"></pre>
-                                <table class="hide-table" id="string-trimEnd-table">
-                                    <tr class="hide-string-methods" id="hide-trimEnd-method">
-                                        <th>Original value </th>
-                                        <th>:</th>
-                                        <th id="trimEnd-position"></th>
-                                    </tr>
-                                    <tr class="hide-string-methods" id="hide-trimEnd-value">
-                                        <th>Trimmed value </th>
-                                        <th>:</th>
-                                        <th id="trimEnd"></th>
-                                    </tr>
-                                </table>
-                                <p class="hide-string-methods" id="hide-trimEnd-explanation">trim() removes white space from the end</p>
+                            <div class="col-sm-4 col-md-2 text-end full-width">
+                                <a class="back-to-top btn bg-info-subtle border-dark btn-sm w-100" href="#top">Top</a>
                             </div>
                         </div>
+                        <!--</div>-->
                     </div>
-                            
-                    <div class="container">
-                        <div class="row align-items-start">
-                                  
-                            <!-- string.charAt() -->
-                            <div class="col-md-4 inner-col">  
-                                <h5>string.charAt()</h5>
-                                <pre class="hide-string-methods shadow" id="charAt-code"></pre>
-                                <table class="hide-table" id="charAt-table">
-                                    <tr class="hide-string-methods" id="hide-charAt-method">
-                                        <th>Index # </th>
-                                        <th>:</th>
-                                        <th id="charAt-position"></th>
-                                    </tr>
-                                    <tr class="hide-string-methods" id="hide-charAt-value">
-                                        <th>Character </th>
-                                        <th>:</th>
-                                        <th id="charAt"></th>
-                                    </tr>
-                                    <tr class="hide-string-methods" id="hide-charAt-place">
-                                        <th>Position </th>
-                                        <th>:</th>
-                                        <th class="red"><span id="counted-charAt"></span><span id="st-nd-rd-th-charAt"></span></th>
-                                    </tr>
-                                </table>
-                                <p class="hide-string-methods" id="hide-charAt-explanation">charAt() retrieves the string character at the given index number</p>                                
-                            </div>
-
-                            <!-- string.indexOf() -->
-                            <div class="col-md-4 inner-col"> 
-                                <h5>string.indexOf()</h5>
-                                <pre class="hide-string-methods shadow" id="indexOf-code"></pre>
-                                <table class="hide-table" id="string-indexOf-table">
-                                    <tr class="hide-string-methods" id="hide-indexOf-method">
-                                        <th>Character to index </th>
-                                        <th>:</th>
-                                        <th id="indexOf-position"></th>
-                                    </tr>
-                                    <tr class="hide-string-methods" id="hide-indexOf-value">
-                                        <th>Index # </th>
-                                        <th>:</th>
-                                        <th id="indexOf"></th>
-                                    </tr>
-                                    <tr class="hide-string-methods" id="hide-indexOf-place">
-                                        <th>Position </th>
-                                        <th>:</th>
-                                        <th class="red"><span id="counted-indexOf"></span><span id="st-nd-rd-th-indexOf"></span></th>
-                                    </tr>
-                                </table>
-                                <p class="hide-string-methods" id="hide-indexOf-explanation">indexOf() retrieves the <span class="result">FIRST</span> zero-indexed occurence of a character</p>
-                            </div>
-
-                            <!-- string.lastIndexOf() -->
-                            <div class="col-md-4 inner-col"> 
-                                <h5>string.lastIndexOf()</h5>
-                                <pre class="hide-string-methods shadow" id="lastIndexOf-code"></pre>
-                                <table class="hide-table" id="string-lastIndexOf-table">
-                                    <tr class="hide-string-methods" id="hide-lastIndexOf-method">
-                                        <th>Character to index </th>
-                                        <th>:</th>
-                                        <th id="lastIndexOf-position"></th>
-                                    </tr>
-                                    <tr class="hide-string-methods" id="hide-lastIndexOf-value">
-                                        <th>Last Index # </th>
-                                        <th>:</th>
-                                        <th id="lastIndexOf"></th>
-                                    </tr>
-                                    <tr class="hide-string-methods" id="hide-lastIndexOf-place">
-                                        <th>Position </th>
-                                        <th>:</th>
-                                        <th class="red"><span id="counted-lastIndexOf"></span><span id="st-nd-rd-th-lastIndexOf"></span></th>
-                                    </tr>
-                                </table>
-                                <p class="hide-string-methods" id="hide-lastIndexOf-explanation">lastIndexOf() retrieves the <span class="result">LAST</span> zero-indexed occurence of a character</p>           
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="container">
-                        <div class="row align-items-start">
-
-                            <!-- string.startsWith() -->
-                            <div class="col-md-4 inner-col">
-                                <h5>string.startsWith()</h5>
-                                <pre class="hide-string-methods shadow" id="startsWith-code"></pre>
-                                <table class="hide-table" id="string-startsWith-table">
-                                    <tr class="hide-string-methods" id="hide-startsWith-method">
-                                        <th>True or False? </th>
-                                        <th>:</th>
-                                        <th id="startsWith-boolean"></th>
-                                    </tr>
-                                    <tr class="hide-string-methods" id="hide-startsWith-value">
-                                        <th>Starts with </th>
-                                        <th>:</th>
-                                        <th id="startsWith"></th>
-                                    </tr>
-                                </table>
-                                <p class="hide-string-methods" id="hide-startsWith-explanation">startsWith() returns true until the <span class="result">START</span> of the string differs</p>
-                            </div>
-
-                            <!-- string.endsWith() -->
-                            <div class="col-md-4 inner-col">
-                                <h5>string.endsWith()</h5>
-                                <pre class="hide-string-methods shadow" id="endsWith-code"></pre>
-                                <table class="hide-table" id="string-endsWith-table">
-                                    <tr class="hide-string-methods" id="hide-endsWith-method">
-                                        <th>True or False? </th>
-                                        <th>:</th>
-                                        <th id="endsWith-boolean"></th>
-                                    </tr>
-                                    <tr class="hide-string-methods" id="hide-endsWith-value">
-                                        <th>Ends with </th>
-                                        <th>:</th>
-                                        <th id="endsWith"></th>
-                                    </tr>
-                                </table>
-                                <p class="hide-string-methods" id="hide-endsWith-explanation">endsWith() returns true until the <span class="result">END</span> of the string differs</p>   
-                            </div>
-
-                            <!-- string.includes() -->
-                            <div class="col-md-4 inner-col">
-                                <h5>string.includes()</h5>
-                                <pre class="hide-string-methods shadow" id="includes-code"></pre>
-                                <table class="hide-table" id="string-includes-table">
-                                    <tr class="hide-string-methods" id="hide-includes-method">
-                                        <th>True or False? </th>
-                                        <th>:</th>
-                                        <th id="includes-boolean"></th>
-                                    </tr>
-                                </table>
-                                <p class="hide-string-methods" id="hide-includes-explanation">includes() returns true if the string includes the input</p> 
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="container">
-                        <div class="row align-items-start">
-
-                            <div class="col-md-12 inner-col border-top">
-                                <h4>Two or more parameters</h4>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!--<div class="container">-->                        
-                    <!-- Show / Hide / Top -->
-                    <div class="row align-items-start">
-                        <div class="col-sm-4 col-md-2 hide inner-col" id="">
-                            <a class="back-to-top btn bg-info-subtle border-dark btn-sm w-100" href=""></a>
-                        </div>
-                        <div class="col-sm-4 col-md-8 hide" id="">
-                            <a class="back-to-top btn bg-danger-subtle border-dark btn-sm w-100" href="">Hide</a>
-                        </div>
-                        <div class="col-sm-4 col-md-2 text-end full-width">
-                            <a class="back-to-top btn bg-info-subtle border-dark btn-sm w-100" href="#top">Top</a>
-                        </div>
-                    </div>
-                    <!--</div>-->
                 </div>
             </div>
         </div>
     </div>
-</div>
 
     <!-- NEXT -->
     <div class="container title bottom-title">
