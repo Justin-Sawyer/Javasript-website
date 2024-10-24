@@ -105,6 +105,14 @@ function charAtIsNaN() {
     charAtCode.innerHTML = `<span class="red">// Enter a number between 0 and 200</span>`;
 };
 
+function charAtIsNotWholeNumber() {
+    hideCharAtMethod.setAttribute ("style", "visibility: hidden; height: 0;");
+    hideCharAtValue.setAttribute ("style", "visibility: hidden; height: 0;");
+    hideCharAtPlace.setAttribute ("style", "visibility: hidden; height: 0;");
+    hideCharAtExplanation.setAttribute ("style", "visibility: hidden; height: 0;");
+    charAtCode.innerHTML = `<span class="red">// Enter a WHOLE number between 0 and 200</span>`;
+};
+
 function tooManyIndexOf() {
     hideindexOfMethod.setAttribute ("style", "visibility: hidden; height: 0;");
     hideIndexOfValue.setAttribute ("style", "visibility: hidden; height: 0;");
@@ -201,8 +209,6 @@ function hideIncludes() {
 };
 
 function trimmedValue() {
-    console.log(`letter: "${letterMethods}"`)
-    console.log(`original: "${originalValue}"`)
     let newTrimmedValue = originalValue.trim();
     if (originalValue == newTrimmedValue) {
         nothingToTrim();
@@ -521,10 +527,10 @@ string.lastIndexOf("<span class="result string">${letterMethods}</span>");`
 function charAtValue() {
     char = panagram.charAt(letterMethods);
     letterMethods = Number(letterMethods);
-    console.log(`char: "${letterMethods}"`)
-    console.log(`orig: "${originalValue}"`)
     if (Number.isNaN(letterMethods) || (letterMethods > 200) || (letterMethods < 0) || (letterMethods == "")) {
         charAtIsNaN();
+    } else if ((letterMethods - Math.floor(letterMethods)) !== 0) {
+        charAtIsNotWholeNumber();
     } else {
         charAtPosition.innerHTML = `<span class="result green">${letterMethods}</span>`;
         charAt.innerHTML = `"<span class="result string">${char}</span>"`;
@@ -611,10 +617,8 @@ function ifEmptyString() {
 function getInputValue() {
     letterMethods = "";
     letterMethods = document.getElementById("letter-methods").value;
-    console.log(`letter: "${typeof letterMethods}"`)
     // see whether value has been entered
     inputValue = letterMethods;
-    console.log(`letter: "${typeof inputValue}"`)
     if (!inputValue) {
         // warning text
         document.getElementById("number-of-letters").innerHTML = `<span class="result red">Please enter something!</span>`;
