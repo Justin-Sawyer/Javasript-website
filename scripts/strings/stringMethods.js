@@ -215,8 +215,8 @@ function trimmedValue() {
     if (originalValue == newTrimmedValue) {
         nothingToTrim();
     } else {
-        trimCode.innerHTML = `let string = "<span class="result string">${originalValue}</span>";
-string.trim()`;
+        trimCode.innerHTML = `let input = "<span class="result string">${originalValue}</span>";
+input.trim()`;
         trimPosition.innerHTML = `"<span class="result string">${originalValue}</span>"`;
         trim.innerHTML = `"<span class="result string">${newTrimmedValue}</span>"`;
     };    
@@ -227,8 +227,8 @@ function trimmedStartValue() {
     if (originalValue == newTrimmedStartValue) {
         nothingToTrimStart();
     } else {
-        trimStartCode.innerHTML = `let string = "<span class="result string">${originalValue}</span>";
-string.trimStart()`;
+        trimStartCode.innerHTML = `let input = "<span class="result string">${originalValue}</span>";
+input.trimStart()`;
         trimStartPosition.innerHTML = `"<span class="result string">${originalValue}</span>"`;
         trimStart.innerHTML = `"<span class="result string">${newTrimmedStartValue}</span>"`;
     };    
@@ -239,8 +239,8 @@ function trimmedEndValue() {
     if (originalValue == newTrimmedEndValue) {
         nothingToTrimEnd();
     } else {
-        trimEndCode.innerHTML = `let string = "<span class="result string">${originalValue}</span>";
-string.trimEnd()`;
+        trimEndCode.innerHTML = `let input = "<span class="result string">${originalValue}</span>";
+input.trimEnd()`;
         trimEndPosition.innerHTML = `"<span class="result string">${originalValue}</span>"`;
         trimEnd.innerHTML = `"<span class="result string">${newTrimmedEndValue}</span>"`;
     };    
