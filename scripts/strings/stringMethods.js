@@ -215,7 +215,8 @@ function trimmedValue() {
     if (originalValue == newTrimmedValue) {
         nothingToTrim();
     } else {
-        trimCode.innerHTML = `string.trim("<span class="result string">${originalValue}</span>")`;
+        trimCode.innerHTML = `let string = "<span class="result string">${originalValue}</span>";
+string.trim()`;
         trimPosition.innerHTML = `"<span class="result string">${originalValue}</span>"`;
         trim.innerHTML = `"<span class="result string">${newTrimmedValue}</span>"`;
     };    
@@ -226,7 +227,8 @@ function trimmedStartValue() {
     if (originalValue == newTrimmedStartValue) {
         nothingToTrimStart();
     } else {
-        trimStartCode.innerHTML = `string.trimStart("<span class="result string">${originalValue}</span>")`;
+        trimStartCode.innerHTML = `let string = "<span class="result string">${originalValue}</span>";
+string.trimStart()`;
         trimStartPosition.innerHTML = `"<span class="result string">${originalValue}</span>"`;
         trimStart.innerHTML = `"<span class="result string">${newTrimmedStartValue}</span>"`;
     };    
@@ -237,7 +239,8 @@ function trimmedEndValue() {
     if (originalValue == newTrimmedEndValue) {
         nothingToTrimEnd();
     } else {
-        trimEndCode.innerHTML = `string.trimEnd("<span class="result string">${originalValue}</span>")`;
+        trimEndCode.innerHTML = `let string = "<span class="result string">${originalValue}</span>";
+string.trimEnd()`;
         trimEndPosition.innerHTML = `"<span class="result string">${originalValue}</span>"`;
         trimEnd.innerHTML = `"<span class="result string">${newTrimmedEndValue}</span>"`;
     };    
@@ -251,7 +254,7 @@ function upperCaseString() {
     panagram = panagrams.innerHTML;
     panagram = panagram.replaceAll("&amp;", "&").replaceAll("&lt;", "<").replaceAll("&gt;", ">")
 
-    let newUpperCasePanagram = `string.toUpperCase()
+    let newUpperCasePanagram = `pangram.toUpperCase()
 
 ABCDEFGHIJKLMNOPQRSTUVWXYZ 
 ${spanElement}abcdefghijklmnopqrstuvwxyz${closeSpanElement} 0123456789 
@@ -263,7 +266,7 @@ ABCDEFGHIJKLMNOPQRSTUVWXYZ`;
     newUpperCasePanagram = newUpperCasePanagram.toUpperCase()
         .replaceAll("<SPAN>", "<span class='result red'>")
         .replaceAll("</SPAN>", "</span>")
-        .replaceAll("STRING.TOUPPERCASE", "string.toUpperCase")
+        .replaceAll("PANGRAM.TOUPPERCASE", "pangram.toUpperCase")
     document.getElementById("toUpperCase-code").innerHTML = newUpperCasePanagram;
 
     panagramUpperCase = panagram.toUpperCase();
@@ -344,7 +347,7 @@ function lowerCaseString() {
     panagram = panagrams.innerHTML;
     panagram = panagram.replaceAll("&amp;", "&").replaceAll("&lt;", "<").replaceAll("&gt;", ">");
 
-    let newLowerCasePanagram = `string.toLowerCase()
+    let newLowerCasePanagram = `pangram.toLowerCase()
 
 ${spanElement}ABCDEFGHIJKLMNOPQRSTUVWXYZ${closeSpanElement}
 abcdefghijklmnopqrstuvwxyz 0123456789 
@@ -355,7 +358,7 @@ ${spanElement}ABCDEFGHIJKLMNOPQRSTUVWXYZ${closeSpanElement}`;
 
     newLowerCasePanagram = newLowerCasePanagram.toLowerCase()
         .replaceAll("<span>", "<span class='result red'>")
-        .replaceAll("string.tolowercase", "string.toLowerCase");
+        .replaceAll("pangram.tolowercase", "pangram.toLowerCase");
     document.getElementById("toLowerCase-code").innerHTML = newLowerCasePanagram;
 
     panagramLowerCase = panagram.toLowerCase();
@@ -450,7 +453,7 @@ function stringStartsWith() {
         startsWith.innerHTML = `"<span class="string">${panagramStart}</span>"`;
     };
     
-    startsWithCode.innerHTML = `string.startsWith("<span class="result string">${inputValue}</span>");`
+    startsWithCode.innerHTML = `pangram.startsWith("<span class="result string">${inputValue}</span>");`
 };
 
 function stringEndsWith() {
@@ -471,7 +474,7 @@ function stringEndsWith() {
         endsWith.innerHTML = `"<span class="string">${panagramEnd}</span>"`;
     };
     
-    endsWithCode.innerHTML = `string.endsWith("<span class="result string">${inputValue}</span>");`
+    endsWithCode.innerHTML = `pangram.endsWith("<span class="result string">${inputValue}</span>");`
 };
 
 function stringIncludes() {
@@ -483,7 +486,7 @@ function stringIncludes() {
         includesBoolean.innerHTML = `<span class="red">False</span>`;
     };
     
-    includesCode.innerHTML = `string.includes("<span class="result string">${inputValue}</span>");`
+    includesCode.innerHTML = `pangram.includes("<span class="result string">${inputValue}</span>");`
 };
 
 function indexOfStringValue() {
@@ -503,7 +506,7 @@ function indexOfStringValue() {
         document.getElementById("st-nd-rd-th-indexOf").textContent = "th";
     };
     indexOfCode.innerHTML = `<span class="string">// strings are zero indexed</span>
-string.indexOf("<span class="result string">${letterMethods}</span>");`
+pangram.indexOf("<span class="result string">${letterMethods}</span>");`
 };
 
 function lastIndexOfStringValue() {
@@ -523,17 +526,31 @@ function lastIndexOfStringValue() {
         document.getElementById("st-nd-rd-th-lastIndexOf").textContent = "th";
     };
     lastIndexOfCode.innerHTML = `<span class="string">// strings are zero indexed</span>
-string.lastIndexOf("<span class="result string">${letterMethods}</span>");`
+pangram.lastIndexOf("<span class="result string">${letterMethods}</span>");`
 };
 
 function charAtValue() {
     char = panagram.charAt(letterMethods);
     letterMethods = Number(letterMethods);
-    if (Number.isNaN(letterMethods) || (letterMethods > 200) || (letterMethods < 0) || (letterMethods == "")) {
+    if (letterMethods === 0) {
+        charAtPosition.innerHTML = `<span class="result green">${letterMethods}</span>`;
+        charAt.innerHTML = `"<span class="result string">${char}</span>"`;
+        countCharAt = letterMethods+1;
+        countedCharAt.textContent = countCharAt;
+        document.getElementById("st-nd-rd-th-charAt").textContent = "st";
+        if (originalValue.includes(" ")) {
+            charAtCode.innerHTML = `<span class="string">// converting string to Number trims value
+// strings are zero indexed</span>
+pangram.charAt(<span class="result green">${letterMethods}</span>);`;
+        } else {
+            charAtCode.innerHTML = `<span class="string">// strings are zero indexed</span>
+pangram.charAt(<span class="result green">${letterMethods}</span>);`;
+        };
+    } else if (Number.isNaN(letterMethods) || (letterMethods > 200) || (letterMethods <= -1) || (letterMethods == "")) {
         charAtIsNaN();
     } else if ((letterMethods - Math.floor(letterMethods)) !== 0) {
         charAtIsNotWholeNumber();
-    } else {
+    } else  {
         charAtPosition.innerHTML = `<span class="result green">${letterMethods}</span>`;
         charAt.innerHTML = `"<span class="result string">${char}</span>"`;
         countCharAt = letterMethods+1;
@@ -551,10 +568,10 @@ function charAtValue() {
         if (originalValue.includes(" ")) {
             charAtCode.innerHTML = `<span class="string">// converting string to Number trims value
 // strings are zero indexed</span>
-string.charAt(<span class="result green">${letterMethods}</span>);`
+pangram.charAt(<span class="result green">${letterMethods}</span>);`
         } else {
             charAtCode.innerHTML = `<span class="string">// strings are zero indexed</span>
-string.charAt(<span class="result green">${letterMethods}</span>);`
+pangram.charAt(<span class="result green">${letterMethods}</span>);`
         };
     };
 };
