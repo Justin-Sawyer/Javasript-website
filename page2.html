@@ -141,7 +141,7 @@
                                 <li><hr class="dropdown-divider"></li>
                                 <li><a class="dropdown-item" href="#operators">Operators</a></li>
                                 <li><hr class="dropdown-divider"></li>
-                                <li><a class="dropdown-item" href="#arithmetc">Arithmetc</a></li>
+                                <li><a class="dropdown-item" href="#arithmetic">Arithmetic</a></li>
                                 <li><hr class="dropdown-divider"></li>
                                 <li><a class="dropdown-item" href="#increment-operators">Increment Operators</a></li>
                                 <li><hr class="dropdown-divider"></li>
@@ -194,6 +194,21 @@
                                 <li><a class="dropdown-item" href="#area-from-circumference">Area of Circle from its Circumference</a></li>
                                 <li><hr class="dropdown-divider"></li>
                                 <li><a class="dropdown-item last-dropdown-item" href="#circumference-from-area">Circumference of Circle from its Area</a></li>
+                            </ul>
+                        </li>
+                        <li><hr class="dropdown-divider"></li>
+
+                        <!-- Counters -->
+                        <li class="nav-item dropend">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Counters
+                            </a>
+                            <ul class="dropdown-menu border-0">
+                                <li><a class="dropdown-item top-dropdown-item" href="#counters">Counters</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item last-dropdown-item" href="#plus-minus-counter">Increase / decrease by one</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item last-dropdown-item" href="#multiply-divide-counter">Multiply / divide by two</a></li>
                             </ul>
                         </li>
                         <li><hr class="dropdown-divider"></li>
@@ -781,7 +796,6 @@ Missing initializer in const declaration</span>
         </div>
     </div>
 
-
     <!-- DATA TYPES -->
     <div class="container title">
         <div class="row align-items-start">
@@ -881,7 +895,6 @@ Missing initializer in const declaration</span>
             </div>
         </div>
     </div>
-
 
     <!-- TYPE CONVERSION -->
     <div class="container title">
@@ -1157,7 +1170,6 @@ z = Boolean(z);
         </div>
     </div>
 
-
     <!-- MATHS -->
     <div class="container title">
         <div class="row align-items-start">
@@ -1216,7 +1228,7 @@ z = Boolean(z);
             </div>
 
             <!-- ARITHMETIC -->
-            <div class="col-md-6" id="arithmetc">
+            <div class="col-md-6" id="arithmetic">
                 <div class="card shadow">
                     <div class="card-body">
                         <h3>Arithmetic</h3>
@@ -1452,14 +1464,14 @@ z = Boolean(z);
                                 <div class="col-md-12 inner-col">
                                     <h4>Rounding up & down</h4>
                                 </div>
-                                <div class="col-md-4 inner-col">
+                                <div class="col-md-4 inner-col" id="">
                                     <input class="form-control form-control-sm" type="text" placeholder="Enter a number" aria-label=".form-control-sm example" id="first-number">
                                     <div class="btn-group w-100" role="group" aria-label="Basic example">
                                         <button class="btn bg-primary-subtle border-dark btn-sm group-button" onclick="mathMethods()">Submit Number</button>
                                     </div>
                                 </div>
                                 <div class="col-md-4 inner-col">  
-                                    <h5>Math.ceil()</h5>
+                                    <h5 id="ceil-div">Math.ceil()</h5>
                                     <pre class="hide-maths-methods shadow" id="ceil-code"></pre>
                                     <p class="hide-maths-methods">Rounds up: <span class="result" id="ceil"></span></p>
                                     <h5>Math.floor()</h5>
@@ -1658,7 +1670,6 @@ z = Boolean(z);
         </div>
     </div>
 
-
     <!-- ACCEPTING USER INPUT-->
     <div class="container title">
         <div class="row align-items-start">
@@ -1726,11 +1737,10 @@ z = Boolean(z);
         </div>
     </div>
 
-
     <!-- USING CONSTANTS (PI) -->
     <div class="container title">
         <div class="row align-items-start">            
-            <h2 id="using-constants">Using constants</h2>
+            <h2 id="using-constants">Using Constants</h2>
 
             <!-- Area from radius -->
             <div class="col-md-6" id="area-from-radius">
