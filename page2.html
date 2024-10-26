@@ -451,7 +451,6 @@ greet = "say hello"</pre>
         </div>
     </div>
 
-
     <!-- LET -->
     <div class="container title">
         <div class="row align-items-start">
@@ -622,7 +621,6 @@ greet = "say hello"</pre>
             </div>
         </div>
     </div>
-
 
     <!-- CONST -->
     <div class="container title">
@@ -1616,7 +1614,7 @@ z = Boolean(z);
                                 </div>   
 
                                 <!-- Random -->
-                                <div class="col-md-12 inner-col border-top">
+                                <div class="col-md-12 inner-col border-top" id="random-div">
                                     <h4>Random</h4>
                                 </div>
                                 <div class="col-md-4 inner-col">
@@ -2081,14 +2079,11 @@ z = Boolean(z);
                         <!-- Show / Hide / Top -->
                         <div class="container card-buttons">
                             <div class="row align-items-start">
-                                <div class="col-sm-4 col-md-2 hide code-buttons" id="show-dice-code">
-                                    <a class="back-to-top btn bg-success-subtle border-dark btn-sm w-100" id="show-dice-code-button">Code</a>
+                                <div class="col-sm-4 col-md-2 code-buttons" id="">
+                                    <a class="back-to-top btn bg-info-subtle border-dark btn-sm w-100" href="#random-div">Math.random()</a>
                                 </div>
-                                <div class="col-sm-4 col-md-2 hide code-buttons" id="hide-dice-code">
+                                <div class="col-sm-4 col-md-8 hide code-buttons" id="hide-dice-code">
                                     <a class="back-to-top btn bg-warning-subtle border-dark btn-sm w-100" id="hide-dice-code-button">Hide</a>
-                                </div>
-                                <div class="col-sm-none col-md-6 hide empty-code-button" id="">
-                                    <a class="back-to-top btn bg-warning-subtle border-dark btn-sm w-100" id=""></a>
                                 </div>
                                 <div class="col-sm-4 col-md-2 text-end">
                                     <a class="back-to-top btn bg-info-subtle border-dark btn-sm w-100" href="#top">Top</a>
@@ -2413,41 +2408,47 @@ z = Boolean(z);
             <div class="row align-items-start">            
                 <div class="col-4" id="">
                     <ul class="bottom-nav left">
-                        <li class="bottom-nav-items"><a href="#var">var</a></li>
-                        <li class="bottom-nav-items"><a href="#let">let</a></li>
-                        <li class="bottom-nav-items"><a href="#const">const</a></li>
-                        <li class="bottom-nav-items"><a href="#data-types">Data Types</a></li>
+                        <li class="bottom-nav-items"><a  class="link" href="#var">var</a></li>
+                        <li class="bottom-nav-items"><a  class="link" href="#let">let</a></li>
+                        <li class="bottom-nav-items"><a  class="link" href="#const">const</a></li>
+                        <li class="bottom-nav-items"><a  class="link" href="#data-types">Data Types</a></li>
                     </ul>
                 </div>
                 <div class="col-4" id="">
                     <ul class="bottom-nav middle">
-                        <li class="bottom-nav-items"><a href="#type-conversion">Type Conversion</a></li>
-                        <li class="bottom-nav-items"><a href="#math">Math</a></li>
-                        <li class="bottom-nav-items"><a href="#user-input">User Input</a></li>
-                        <li class="bottom-nav-items"><a href="#using-constants">Using Constants</a></li>
+                        <li class="bottom-nav-items"><a  class="link" href="#type-conversion">Type Conversion</a></li>
+                        <li class="bottom-nav-items"><a  class="link" href="#math">Math</a></li>
+                        <li class="bottom-nav-items"><a  class="link" href="#user-input">User Input</a></li>
+                        <li class="bottom-nav-items"><a  class="link" href="#using-constants">Using Constants</a></li>
                     </ul>
                 </div>
                 <div class="col-4" id="">
                     <ul class="bottom-nav right">
-                        <li class="bottom-nav-items"><a href="#counters">Counters</a></li>
-                        <li class="bottom-nav-items"><a href="#random">Random</a></li>
-                        <li class="bottom-nav-items"><a href="#if">If</a></li>
-                        <li class="bottom-nav-items"><a href="#switch">Switch</a></li>
+                        <li class="bottom-nav-items"><a  class="link" href="#counters">Counters</a></li>
+                        <li class="bottom-nav-items"><a  class="link" href="#random">Random</a></li>
+                        <li class="bottom-nav-items"><a  class="link" href="#if">If</a></li>
+                        <li class="bottom-nav-items"><a  class="link" href="#switch">Switch</a></li>
                     </ul>
                 </div>
                 <div class="col-4" id="">
                     <ul class="bottom-nav left middle-bottom">
-                        <li class="bottom-nav-items"><a href="index.html">Previous Page</a></li>
+                        <li class="bottom-nav-items"><a  class="link" href="index.html">Previous Page</a></li>
                     </ul>
                 </div>
                 <div class="col-4" id="">
                     <ul class="bottom-nav middle middle-bottom">
-                        <li class="bottom-nav-items"><a href="#top">Top</a></li>
+                        <li class="bottom-nav-items"><a  class="link" href="#top">Top</a></li>
                     </ul>
                 </div>
                 <div class="col-4" id="">
                     <ul class="bottom-nav right middle-bottom">
-                        <li class="bottom-nav-items"><a href="page3.html">Next Page</a></li>
+                        <li class="bottom-nav-items"><a  class="link" href="page3.html">Next Page</a></li>
+                    </ul>
+                </div>
+
+                <div class="col" id="">
+                    <ul class="bottom-nav middle middle-bottom">
+                        <li class="bottom-nav-items">&#169; <a class="link" href="index.html">J's Javascript</a><span class="year"></span></li>
                     </ul>
                 </div>
             </div>

@@ -72,6 +72,11 @@ nav {
 }
 
 /*------------------- end navigation */
+.link {
+    color: #F89178!important;
+    text-decoration: none;
+}
+
 .top {
     margin-top: 0.5rem;
 }
