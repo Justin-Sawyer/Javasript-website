@@ -31,7 +31,7 @@ abcdefghijklmnopqrstuvwxyz 0123456789
 #@&é"'(§è!çà)-°_^¨$€£*ù%${backtick}<>?,.;/:+= 
 #@&é"'(§è!çà)-°_^¨$€£*ù%${backtick}<>?,.;/:+= 
 abcdefghijklmnopqrstuvwxyz 0123456789 
-ABCDEFGHIJKLMNOPQRSTUVWXYZ`
+ABCDEFGHIJKLMNOPQRSTUVWXYZ`;
         replaceCode.setAttribute ("style", "visibility: visible; height: 100%;");
         replaceCode.innerHTML = `pangram.replace("<span class="result string">${replaceCharacters}</span>", "<span class="result string">${replacement}</span>");
 
@@ -52,12 +52,12 @@ abcdefghijklmnopqrstuvwxyz 0123456789
 #@&é"'(§è!çà)-°_^¨$€£*ù%${backtick}<>?,.;/:+= 
 #@&é"'(§è!çà)-°_^¨$€£*ù%${backtick}<>?,.;/:+= 
 abcdefghijklmnopqrstuvwxyz 0123456789 
-ABCDEFGHIJKLMNOPQRSTUVWXYZ`
+ABCDEFGHIJKLMNOPQRSTUVWXYZ`;
         replaceAllCode.setAttribute ("style", "visibility: visible; height: 100%;");
         replaceAllCode.innerHTML = `pangram.replaceAll("<span class="result string">${replaceAllCharacters}</span>", "<span class="result string">${replacementAll}</span>");
 
 ${panagramReplaceAllValues.replaceAll(replaceAllCharacters, `<span class="result red">${replacementAll}</span>`)}`;
-    }
+    };
 }
 
 twoOrMoreParametersStringMethods.onclick = function() {
@@ -72,5 +72,5 @@ twoOrMoreParametersStringMethods.onclick = function() {
         warningText.innerHTML = "";
         panagramReplace();
         panagramReplaceAll();
-    }
+    };
 }

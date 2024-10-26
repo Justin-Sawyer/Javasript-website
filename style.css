@@ -85,6 +85,15 @@ nav {
     padding-top: 2rem;
 }
 
+.video {
+    aspect-ratio: 16 / 9;
+    width: 100%;
+}
+
+.table-normal-font-weight {
+    font-weight: normal;
+}
+
 #hidden-buttons,
 .hide-random-method,
 #dice-result {
@@ -97,6 +106,10 @@ nav {
 
 .inner-col {
     padding-left: 0;
+}
+
+.full-col {
+    padding-right: 0;
 }
 
 .left-button {
@@ -115,6 +128,7 @@ nav {
 .hide-maths-trig-methods,
 .hide-maths-max-min-methods,
 .hide-string-methods,
+.hide-two-params-string-methods,
 .hide-table {
     visibility: hidden;
     height: 0;
