@@ -25,7 +25,7 @@ function reset() {
     document.getElementById("random-equation").textContent = "";
 };
 
-function nextPage() {
+function nextPage3() {
     document.getElementById("go-to").innerHTML = `<div class="card shadow">
     <div class="card-body">
         <h3>Congratulations!</h3>
@@ -51,7 +51,7 @@ function nextPage() {
     document.getElementById("next").scrollIntoView({ behavior: "smooth", block: "start" });
 };
 
-function revisePage1() {
+function revisePage2() {
     document.getElementById("go-to").innerHTML = `<div class="card shadow">
     <div class="card-body">
         <h3>Do some revision?</h3>
