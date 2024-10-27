@@ -1,4 +1,5 @@
 let firstNumber;
+let colorType;
 
 function mathMethods() {
     
@@ -18,32 +19,41 @@ function mathMethods() {
     absolute = Math.abs(firstNumber)
 
     document.getElementById("ceil").classList.remove("nan");
+    document.getElementById("ceil").classList.add("green");
     document.getElementById("ceil").innerHTML = ceil;
     if (ceil = Number.isNaN(ceil)) {
         ceil = "NaN";
         document.getElementById("ceil").classList.add("nan");
+        document.getElementById("ceil").classList.remove("green");
         document.getElementById("ceil").innerHTML = `${ceil}`;
     };
 
     document.getElementById("floor").classList.remove("nan");
+    document.getElementById("floor").classList.add("green");
     document.getElementById("floor").textContent = floor;
     if (floor = Number.isNaN(floor)) {
         floor = "NaN";
         document.getElementById("floor").classList.add("nan");
+        document.getElementById("floor").classList.remove("green");
         document.getElementById("floor").innerHTML = `${floor}`;
     };
     
     if (sign == 1) {
         document.getElementById("sign").classList.remove("nan");
-        document.getElementById("sign").innerHTML = `${sign} (<span class="green">positive</span>)`;
+        document.getElementById("sign").classList.add("red");
+        document.getElementById("sign").innerHTML = `${sign} <span class="black">(</span><span class="green">positive</span><span class="black">)</span>`;
     } else if (sign == -1) {
         document.getElementById("sign").classList.remove("nan");
-        document.getElementById("sign").innerHTML = `${sign} (<span class="red">negative</span>)`;
+        document.getElementById("sign").classList.add("red");
+        document.getElementById("sign").innerHTML = `${sign} <span class="black">(</span><span class="red">negative</span><span class="black">)</span>`;
     } else if (sign == 0) {
         document.getElementById("sign").classList.remove("nan");
+        document.getElementById("sign").classList.add("red");
         document.getElementById("sign").innerHTML = `${sign}`;
     } else if (sign = Number.isNaN(sign)) {
         sign = "NaN";
+
+        document.getElementById("sign").classList.remove("red");
         document.getElementById("sign").classList.add("nan");
         document.getElementById("sign").innerHTML = `${sign}`;
     } else {
@@ -53,42 +63,57 @@ function mathMethods() {
 
     if (round < firstNumber) {
         document.getElementById("round").classList.remove("nan");
-        document.getElementById("round").innerHTML = `${round} (<span class="red result arrow">⬇⬇</span>)`;
+        document.getElementById("round").classList.add("green");
+        document.getElementById("round").innerHTML = `${round} <span class="black">(</span><span class="red result arrow">⬇⬇</span><span class="black">)</span>`;
     } else if (round == firstNumber) {
         document.getElementById("round").classList.remove("nan");
-        document.getElementById("round").innerHTML = `${round} (<span class="result arrow">⬅⬅</span>)`;
+        document.getElementById("round").classList.add("green");
+        document.getElementById("round").innerHTML = `${round} <span class="black">(</span><span class="result black arrow">⬅⬅</span><span class="black">)</span>`;
     } else if (sign = Number.isNaN(round)) {
         round = "NaN";
+        document.getElementById("round").classList.remove("green");
         document.getElementById("round").classList.add("nan");
         document.getElementById("round").innerHTML = `${round}`;
     } else {
         document.getElementById("round").classList.remove("nan");
-        document.getElementById("round").innerHTML = `${round} (<span class="green result arrow">⬆⬆</span>)`;
+        document.getElementById("round").classList.add("green");
+        document.getElementById("round").innerHTML = `${round} <span class="black">(</span><span class="green result arrow">⬆⬆</span><span class="black">)</span>`;
     };
     
     document.getElementById("trunc").classList.remove("nan");
-    document.getElementById("trunc").innerHTML = `${trunc} (<span class="result arrow">⬅⬅</span>)`;
+    document.getElementById("trunc").classList.add("green");
+    document.getElementById("trunc").innerHTML = `${trunc} <span class="result black arrow">(⬅⬅)</span>`;
     if (trunc = Number.isNaN(trunc)) {
         trunc = "NaN";
         document.getElementById("trunc").classList.add("nan");
+        document.getElementById("trunc").classList.remove("green");
         document.getElementById("trunc").innerHTML = `${trunc}`;
     };
 
     document.getElementById("absolute").classList.remove("nan");
+    document.getElementById("absolute").classList.add("green");
     document.getElementById("absolute").textContent = absolute;
     if (absolute = Number.isNaN(absolute)) {
         absolute = "NaN";
+        document.getElementById("absolute").classList.remove("green");
         document.getElementById("absolute").classList.add("nan");
         document.getElementById("absolute").innerHTML = `${absolute}`;
     };
     
+    if (firstNumber = Number.isNaN(firstNumber)) {
+        colorType = "nan";
+        firstNumber = "NaN"
+    } else {
+        colorType = "green";
+        firstNumber = document.getElementById("first-number").value;
+    };
 
-    document.getElementById("round-code").innerHTML = `Math.round(${firstNumber})`;
-    document.getElementById("floor-code").innerHTML = `Math.floor(${firstNumber})`;
-    document.getElementById("ceil-code").innerHTML = `Math.ceil(${firstNumber})`;
-    document.getElementById("trunc-code").innerHTML = `Math.trunc(${firstNumber})`;
-    document.getElementById("sign-code").innerHTML = `Math.sign(${firstNumber})`;
-    document.getElementById("absolute-code").innerHTML = `Math.abs(${firstNumber})`;  
+    document.getElementById("round-code").innerHTML = `Math.round(<span class="result ${colorType}">${firstNumber}</span>)`;
+    document.getElementById("floor-code").innerHTML = `Math.floor(<span class="result ${colorType}">${firstNumber}</span>)`;
+    document.getElementById("ceil-code").innerHTML = `Math.ceil(<span class="result ${colorType}">${firstNumber}</span>)`;
+    document.getElementById("trunc-code").innerHTML = `Math.trunc(<span class="result ${colorType}">${firstNumber}</span>)`;
+    document.getElementById("sign-code").innerHTML = `Math.sign(<span class="result ${colorType}">${firstNumber}</span>)`;
+    document.getElementById("absolute-code").innerHTML = `Math.abs(<span class="result ${colorType}">${firstNumber}</span>)`;  
     
 }
 
@@ -112,24 +137,61 @@ function mathMaxMinMethods() {
     min = Math.min(numberOne, numberTwo, numberThree);
 
     if (Number.isNaN(max)) {
+        document.getElementById("max").classList.remove("green");
         document.getElementById("max").classList.add("nan");
         max = "NaN";
         document.getElementById("max").textContent = max;
     } else {
         document.getElementById("max").classList.remove("nan");
+        document.getElementById("max").classList.add("green");
         document.getElementById("max").textContent = max;
     };
-    document.getElementById("max-code").innerHTML = `Math.max(${numberOne}, ${numberTwo}, ${numberThree})`;  
+    if ((Number.isNaN(numberOne)) && (Number.isNaN(numberTwo)) && (Number.isNaN(numberThree))) {
+        document.getElementById("max-code").innerHTML = `Math.max(<span class="result nan">${numberOne}</span>, <span class="result nan">${numberTwo}</span>, <span class="result nan">${numberThree}</span>)`;
+    } else if ((Number.isNaN(numberOne)) && (Number.isNaN(numberTwo)) && !(Number.isNaN(numberThree))) {
+        document.getElementById("max-code").innerHTML = `Math.max(<span class="result nan">${numberOne}</span>, <span class="result nan">${numberTwo}</span>, <span class="result green">${numberThree}</span>)`;
+    } else if ((Number.isNaN(numberOne)) && !(Number.isNaN(numberTwo)) && (Number.isNaN(numberThree))) {
+        document.getElementById("max-code").innerHTML = `Math.max(<span class="result nan">${numberOne}</span>, <span class="result green">${numberTwo}</span>, <span class="result nan">${numberThree}</span>)`;
+    } else if (!(Number.isNaN(numberOne)) && (Number.isNaN(numberTwo)) && (Number.isNaN(numberThree))) {
+        document.getElementById("max-code").innerHTML = `Math.max(<span class="result green">${numberOne}</span>, <span class="result nan">${numberTwo}</span>, <span class="result nan">${numberThree}</span>)`;
+    } else if ((Number.isNaN(numberOne)) && !(Number.isNaN(numberTwo)) && !(Number.isNaN(numberThree))) {
+        document.getElementById("max-code").innerHTML = `Math.max(<span class="result nan">${numberOne}</span>, <span class="result green">${numberTwo}</span>, <span class="result green">${numberThree}</span>)`;
+    } else if (!(Number.isNaN(numberOne)) && (Number.isNaN(numberTwo)) && !(Number.isNaN(numberThree))) {
+        document.getElementById("max-code").innerHTML = `Math.max(<span class="result green">${numberOne}</span>, <span class="result nan">${numberTwo}</span>, <span class="result green">${numberThree}</span>)`;
+    } else if (!(Number.isNaN(numberOne)) && !(Number.isNaN(numberTwo)) && (Number.isNaN(numberThree))) {
+        document.getElementById("max-code").innerHTML = `Math.max(<span class="result green">${numberOne}</span>, <span class="result green">${numberTwo}</span>, <span class="result nan">${numberThree}</span>)`;
+    } else {
+        document.getElementById("max-code").innerHTML = `Math.max(<span class="result green">${numberOne}</span>, <span class="result green">${numberTwo}</span>, <span class="result green">${numberThree}</span>)`;  
+    };
 
     if (Number.isNaN(min)) {
+        document.getElementById("min").classList.remove("green");
         document.getElementById("min").classList.add("nan");
         min = "NaN";
         document.getElementById("min").textContent = max;
     } else {
         document.getElementById("min").classList.remove("nan");
+        document.getElementById("min").classList.add("green");
         document.getElementById("min").textContent = min;
     }
-    document.getElementById("min-code").innerHTML = `Math.min(${numberOne}, ${numberTwo}, ${numberThree})`; 
+    //document.getElementById("min-code").innerHTML = `Math.min(<span class="result green">${numberOne}</span>, <span class="result green">${numberTwo}</span>, <span class="result green">${numberThree}</span>)`; 
+    if ((Number.isNaN(numberOne)) && (Number.isNaN(numberTwo)) && (Number.isNaN(numberThree))) {
+        document.getElementById("min-code").innerHTML = `Math.max(<span class="result nan">${numberOne}</span>, <span class="result nan">${numberTwo}</span>, <span class="result nan">${numberThree}</span>)`;
+    } else if ((Number.isNaN(numberOne)) && (Number.isNaN(numberTwo)) && !(Number.isNaN(numberThree))) {
+        document.getElementById("min-code").innerHTML = `Math.max(<span class="result nan">${numberOne}</span>, <span class="result nan">${numberTwo}</span>, <span class="result green">${numberThree}</span>)`;
+    } else if ((Number.isNaN(numberOne)) && !(Number.isNaN(numberTwo)) && (Number.isNaN(numberThree))) {
+        document.getElementById("min-code").innerHTML = `Math.max(<span class="result nan">${numberOne}</span>, <span class="result green">${numberTwo}</span>, <span class="result nan">${numberThree}</span>)`;
+    } else if (!(Number.isNaN(numberOne)) && (Number.isNaN(numberTwo)) && (Number.isNaN(numberThree))) {
+        document.getElementById("min-code").innerHTML = `Math.max(<span class="result green">${numberOne}</span>, <span class="result nan">${numberTwo}</span>, <span class="result nan">${numberThree}</span>)`;
+    } else if ((Number.isNaN(numberOne)) && !(Number.isNaN(numberTwo)) && !(Number.isNaN(numberThree))) {
+        document.getElementById("min-code").innerHTML = `Math.max(<span class="result nan">${numberOne}</span>, <span class="result green">${numberTwo}</span>, <span class="result green">${numberThree}</span>)`;
+    } else if (!(Number.isNaN(numberOne)) && (Number.isNaN(numberTwo)) && !(Number.isNaN(numberThree))) {
+        document.getElementById("min-code").innerHTML = `Math.max(<span class="result green">${numberOne}</span>, <span class="result nan">${numberTwo}</span>, <span class="result green">${numberThree}</span>)`;
+    } else if (!(Number.isNaN(numberOne)) && !(Number.isNaN(numberTwo)) && (Number.isNaN(numberThree))) {
+        document.getElementById("min-code").innerHTML = `Math.max(<span class="result green">${numberOne}</span>, <span class="result green">${numberTwo}</span>, <span class="result nan">${numberThree}</span>)`;
+    } else {
+        document.getElementById("min-code").innerHTML = `Math.max(<span class="result green">${numberOne}</span>, <span class="result green">${numberTwo}</span>, <span class="result green">${numberThree}</span>)`;  
+    };
 }
 
 function mathTrigMethods() {
@@ -150,73 +212,86 @@ function mathTrigMethods() {
     log1p = Math.log1p(trigNumber);
     fround = Math.fround(trigNumber);
 
-    //document.getElementById("sin").textContent = sin;
     if (Number.isNaN(sin)) {
+        document.getElementById("sin").classList.remove("green");
         document.getElementById("sin").classList.add("nan");
         sin = "NaN";
         document.getElementById("sin").textContent = sin;
     } else {
         document.getElementById("sin").classList.remove("nan");
+        document.getElementById("sin").classList.add("green");
         document.getElementById("sin").textContent = sin;
     };
 
-    //document.getElementById("cos").textContent = cos;
     if (Number.isNaN(cos)) {
+        document.getElementById("cos").classList.remove("green");
         document.getElementById("cos").classList.add("nan");
         cos = "NaN";
         document.getElementById("cos").textContent = cos;
     } else {
         document.getElementById("cos").classList.remove("nan");
+        document.getElementById("cos").classList.add("green");
         document.getElementById("cos").textContent = cos;
     };
 
-    //document.getElementById("tan").textContent = tan;
     if (Number.isNaN(tan)) {
+        document.getElementById("tan").classList.remove("green");
         document.getElementById("tan").classList.add("nan");
         tan = "NaN";
         document.getElementById("tan").textContent = tan;
     } else {
         document.getElementById("tan").classList.remove("nan");
+        document.getElementById("tan").classList.add("green");
         document.getElementById("tan").textContent = tan;
     };
 
-
-    //document.getElementById("log").textContent = log;
     if (Number.isNaN(log)) {
+        document.getElementById("log").classList.remove("green");
         document.getElementById("log").classList.add("nan");
         log = "NaN";
         document.getElementById("log").textContent = log;
     } else {
         document.getElementById("log").classList.remove("nan");
+        document.getElementById("log").classList.add("green");
         document.getElementById("log").textContent = log;
     };
 
-    //document.getElementById("log1p").textContent = log1p;
     if (Number.isNaN(log1p)) {
+        document.getElementById("log1p").classList.remove("green");
         document.getElementById("log1p").classList.add("nan");
         log1p = "NaN";
         document.getElementById("log1p").textContent = log1p;
     } else {
         document.getElementById("log1p").classList.remove("nan");
+        document.getElementById("log1p").classList.add("green");
         document.getElementById("log1p").textContent = log1p;
     };
 
-    //document.getElementById("fround").textContent = fround;
     if (Number.isNaN(fround)) {
+        document.getElementById("fround").classList.remove("green");
         document.getElementById("fround").classList.add("nan");
         fround = "NaN";
         document.getElementById("fround").textContent = fround;
     } else {
         document.getElementById("fround").classList.remove("nan");
+        document.getElementById("fround").classList.add("green");
         document.getElementById("fround").textContent = fround;
     };
 
-    document.getElementById("sin-code").innerHTML = `Math.sin(${trigNumber})`;
-    document.getElementById("cos-code").innerHTML = `Math.cos(${trigNumber})`;
-    document.getElementById("tan-code").innerHTML = `Math.tan(${trigNumber})`;
-    document.getElementById("log-code").innerHTML = `Math.log(${trigNumber})`;
-    document.getElementById("log1p-code").innerHTML = `Math.log1p(${trigNumber})`;
-    document.getElementById("fround-code").innerHTML = `Math.fround(${trigNumber})`;
+    if (trigNumber = Number.isNaN(trigNumber)) {
+        colorType = "nan";
+        trigNumber = "NaN"
+    } else {
+        colorType = "green";
+        trigNumber = document.getElementById("trig-number").value;
+    };
+
+    document.getElementById("sin-code").innerHTML = `Math.sin(<span class="result ${colorType}">${trigNumber}</span>)`;
+    document.getElementById("cos-code").innerHTML = `Math.cos(<span class="result ${colorType}">${trigNumber}</span>)`;
+    document.getElementById("tan-code").innerHTML = `Math.tan(<span class="result ${colorType}">${trigNumber}</span>)`;
+    document.getElementById("log-code").innerHTML = `Math.log(<span class="result ${colorType}">${trigNumber}</span>)`;
+    document.getElementById("log1p-code").innerHTML = `Math.log1p(<span class="result ${colorType}">${trigNumber}</span>)`;
+    document.getElementById("fround-code").innerHTML = `Math.fround(<span class="result ${colorType}">${trigNumber}</span>)`;
 
 
 }
@@ -233,25 +308,35 @@ function mathRootMethods() {
     squareRoot = Math.sqrt(rootNumber);
     
     if (Number.isNaN(squareRoot)) {
+        document.getElementById("square").classList.remove("green");
         document.getElementById("square").classList.add("nan");
         squareRoot = "NaN";
         document.getElementById("square").textContent = squareRoot;
+        if (!(Number.isNaN(rootNumber))) {
+            document.getElementById("square-code").innerHTML = `Math.sqrt(<span class="result green">${rootNumber}</span>)`;
+        } else {
+            document.getElementById("square-code").innerHTML = `Math.sqrt(<span class="result nan">${rootNumber}</span>)`;
+        }
     } else {
         document.getElementById("square").classList.remove("nan");
+        document.getElementById("square").classList.add("green");
         document.getElementById("square").textContent = squareRoot;
+        document.getElementById("square-code").innerHTML = `Math.sqrt(<span class="result green">${rootNumber}</span>)`;
     };
-    document.getElementById("square-code").innerHTML = `Math.sqrt(${rootNumber})`;
 
     cubeRoot = Math.cbrt(rootNumber);
     if (Number.isNaN(cubeRoot)) {
+        document.getElementById("cube").classList.remove("green");
         document.getElementById("cube").classList.add("nan");
         cubeRoot = "NaN";
         document.getElementById("cube").textContent = cubeRoot;
+        document.getElementById("cube-code").innerHTML = `Math.cbrt(<span class="result nan">${rootNumber}</span>)`;
         } else {
             document.getElementById("cube").classList.remove("nan");
+            document.getElementById("cube").classList.add("green");
             document.getElementById("cube").textContent = cubeRoot;
+            document.getElementById("cube-code").innerHTML = `Math.cbrt(<span class="result green">${rootNumber}</span>)`;
         };
-    document.getElementById("cube-code").innerHTML = `Math.cbrt(${rootNumber})`;
 }
 
 function mathPowerMethods() {
@@ -272,42 +357,83 @@ function mathPowerMethods() {
 
     if (operandNumber === 0 && operatorNumber === 0){
         document.getElementById("power").classList.remove("nan");
+        document.getElementById("power").classList.remove("green");
         document.getElementById("power").classList.add("red");
         document.getElementById("power").textContent = "Error";
     } else if (Number.isNaN(operandNumber) || Number.isNaN(operatorNumber)) {
-        document.getElementById("power").classList.add("nan");
         document.getElementById("power").classList.remove("red");
+        document.getElementById("power").classList.remove("green");
+        document.getElementById("power").classList.add("nan");
         power = "NaN";
         document.getElementById("power").textContent = power;
     } else {
         document.getElementById("power").classList.remove("nan");
         document.getElementById("power").classList.remove("red");
+        document.getElementById("power").classList.add("green");
         document.getElementById("power").textContent = power;
     };
 
-    document.getElementById("power-code").innerHTML = `power = Math.pow(${operandNumber}, ${operatorNumber})`;
+    if (Number.isNaN(operandNumber) && Number.isNaN(operatorNumber)) {
+        document.getElementById("power-code").innerHTML = `power = Math.pow(<span class="result nan">${operandNumber}</span>, <span class="result nan">${operatorNumber}</span>)`;
+    } else if (!(Number.isNaN(operandNumber)) && Number.isNaN(operatorNumber)) {
+        document.getElementById("power-code").innerHTML = `power = Math.pow(<span class="result green">${operandNumber}</span>, <span class="result nan">${operatorNumber}</span>)`;
+    } else if (Number.isNaN(operandNumber) && !(Number.isNaN(operatorNumber))) {
+        document.getElementById("power-code").innerHTML = `power = Math.pow(<span class="result nan">${operandNumber}</span>, <span class="result green">${operatorNumber}</span>)`;
+    } else {
+        document.getElementById("power-code").innerHTML = `power = Math.pow(<span class="result green">${operandNumber}</span>, <span class="result green">${operatorNumber}</span>)`;
+    }
 
     if ((operandNumber === 0 && operatorNumber === 0) || (operatorNumber === 0) || (operandNumber < 0)) {
         document.getElementById("root").classList.remove("nan");
+        document.getElementById("root").classList.remove("green");
         document.getElementById("root").classList.add("red");
         document.getElementById("root").textContent = "Error";
     } else if (Number.isNaN(operandNumber) || Number.isNaN(operatorNumber)) {
         document.getElementById("root").classList.remove("red");
+        document.getElementById("root").classList.remove("green");
         document.getElementById("root").classList.add("nan");
         root = "NaN";
         document.getElementById("root").textContent = root;
     } else {
         document.getElementById("root").classList.remove("red");
         document.getElementById("root").classList.remove("nan");
+        document.getElementById("root").classList.add("green");
         document.getElementById("root").textContent = root;
     };
 
-    document.getElementById("root-code").innerHTML = `root = Math.pow(${operandNumber}, 1 / ${operatorNumber})`;
-    document.getElementById("operandNumber1").textContent = operandNumber;
-    document.getElementById("operandNumber2").textContent = operandNumber;
+    if (Number.isNaN(operandNumber) && Number.isNaN(operatorNumber)) {
+        document.getElementById("root-code").innerHTML = `root = Math.pow(<span class="result nan">${operandNumber}</span>, <span class="result red">1 /</span> <span class="result nan">${operatorNumber}</span>)`;
+    } else if (!(Number.isNaN(operandNumber)) && Number.isNaN(operatorNumber)) {
+        document.getElementById("root-code").innerHTML = `root = Math.pow(<span class="result green">${operandNumber}</span>, <span class="result red">1 /</span> <span class="result nan">${operatorNumber}</span>)`;
+    } else if (Number.isNaN(operandNumber) && !(Number.isNaN(operatorNumber))) {
+        document.getElementById("root-code").innerHTML = `root = Math.pow(<span class="result nan">${operandNumber}</span>, <span class="result red">1 /</span> <span class="result green">${operatorNumber}</span>)`;
+    } else {
+        document.getElementById("root-code").innerHTML = `root = Math.pow(<span class="result green">${operandNumber}</span>, <span class="result red">1 /</span> <span class="result green">${operatorNumber}</span>)`;
+    }
+    //document.getElementById("root-code").innerHTML = `root = Math.pow(<span class="result green">${operandNumber}</span>, <span class="result red">1 /</span> <span class="result green">${operatorNumber}</span>)`;
 
-    document.getElementById("operatorNumber1").textContent = operatorNumber;
-    document.getElementById("operatorNumber2").textContent = operatorNumber;
+    if (Number.isNaN(operandNumber)) {
+        document.getElementById("operandNumber1").innerHTML = `<span class="result nan">${operandNumber}</span>`;
+        document.getElementById("operandNumber2").innerHTML = `<span class="result nan">${operandNumber}</span>`;
+
+    } else {
+        document.getElementById("operandNumber1").innerHTML = `<span class="result green">${operandNumber}</span>`;
+        document.getElementById("operandNumber2").innerHTML = `<span class="result green">${operandNumber}</span>`;
+
+    };
+
+    if (Number.isNaN(operatorNumber)) {
+        document.getElementById("operatorNumber1").innerHTML = `<span class="result nan">${operatorNumber}</span>`;
+        document.getElementById("operatorNumber2").innerHTML = `<span class="result nan">${operatorNumber}</span>`;
+
+    } else {
+        document.getElementById("operatorNumber1").innerHTML = `<span class="result green">${operatorNumber}</span>`;
+        document.getElementById("operatorNumber2").innerHTML = `<span class="result green">${operatorNumber}</span>`;
+
+    };
+
+    //document.getElementById("operatorNumber1").textContent = operatorNumber;
+    //document.getElementById("operatorNumber2").textContent = operatorNumber;
     
 
 }
@@ -321,33 +447,33 @@ function mathRandomMethod() {
 
     randomNum = Math.random();
     document.getElementById("base-random-method-code").textContent = `Math.random();`;
-    document.getElementById("base-result").textContent = randomNum;
+    document.getElementById("base-result").innerHTML = `<span class="green">${randomNum}</span>`;
 
     randomNum = randomNum * 10;
     document.getElementById("ten-random-method-code").textContent =  `Math.random() * 10;`;
-    document.getElementById("ten-result").textContent = randomNum;
+    document.getElementById("ten-result").innerHTML = `<span class="green">${randomNum}</span>`;
 
     truncNum = Math.trunc(randomNum);
     document.getElementById("trunc-random-method-code").textContent =  `Math.trunc(Math.random() * 10);`;
-    document.getElementById("trunc-result").textContent = truncNum;
+    document.getElementById("trunc-result").innerHTML = `<span class="green">${truncNum}</span>`;
 
     roundNum = Math.round(randomNum);
     document.getElementById("round-random-method-code").textContent =  `Math.round(Math.random() * 10);`;
     if (roundNum > truncNum) {
-        document.getElementById("round-result").innerHTML = `${roundNum} (<span class="green result arrow">⬆⬆</span>)`;
+        document.getElementById("round-result").innerHTML = `<span class="green">${roundNum}</span> (<span class="green result arrow">⬆⬆</span>)`;
     } else {
-        document.getElementById("round-result").innerHTML = roundNum;
+        document.getElementById("round-result").innerHTML = `<span class="green">${roundNum}</span>`;
     }
 
     truncNum = Math.trunc(randomNum) + 1;
     document.getElementById("random-method-between-one-ten-trunc-code").innerHTML =  `<span class="string">// Between 1 and 10 using Math.trunc()</span>
 Math.trunc(Math.random() * 10) + 1;`;
-    document.getElementById("between-one-ten-trunc-result").textContent = truncNum;
+    document.getElementById("between-one-ten-trunc-result").innerHTML = `<span class="green">${truncNum}</span>`;
 
-    roundNum = Math.trunc(randomNum) + 1;
+    roundNum = Math.round(randomNum);
     document.getElementById("random-method-between-one-ten-round-code").innerHTML =  `<span class="string">// Between 1 and 10 using Math.round()</span>
-Math.round(Math.random() * 10) + 1;`;
-    document.getElementById("between-one-ten-round-result").textContent = roundNum;
+Math.round(Math.random() * 10);`;
+    document.getElementById("between-one-ten-round-result").innerHTML = `<span class="green">${roundNum}</span>`;
 
     const min = 50;
     const max = 100;
@@ -356,7 +482,7 @@ Math.round(Math.random() * 10) + 1;`;
 const min = 50;
 const max = 100;    
 Math.round(Math.random() * <span class="result red">(max - min)</span>) + min;`;
-    document.getElementById("between-50-100-round-result").textContent = fiveToTen;
+    document.getElementById("between-50-100-round-result").innerHTML = `<span class="green">${fiveToTen}</span>`;
     document.getElementById("between-50-100-round-result-explanation").innerHTML = `Why is <span class="result red">(max - min)</span> needed in the code above?`;
     document.getElementById("random-method-between-50-100-round-code-explanation").innerHTML =  `<span class="string">// Between 50 and 100 without subtracting 50</span>
 const min = 50;
