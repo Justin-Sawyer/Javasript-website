@@ -21,8 +21,7 @@ function mathMethods() {
     document.getElementById("ceil").classList.remove("nan");
     document.getElementById("ceil").classList.add("green");
     document.getElementById("ceil").innerHTML = ceil;
-    if (ceil = Number.isNaN(ceil)) {
-        ceil = "NaN";
+    if (Number.isNaN(ceil)) {
         document.getElementById("ceil").classList.add("nan");
         document.getElementById("ceil").classList.remove("green");
         document.getElementById("ceil").innerHTML = `${ceil}`;
@@ -31,8 +30,7 @@ function mathMethods() {
     document.getElementById("floor").classList.remove("nan");
     document.getElementById("floor").classList.add("green");
     document.getElementById("floor").textContent = floor;
-    if (floor = Number.isNaN(floor)) {
-        floor = "NaN";
+    if (Number.isNaN(floor)) {
         document.getElementById("floor").classList.add("nan");
         document.getElementById("floor").classList.remove("green");
         document.getElementById("floor").innerHTML = `${floor}`;
@@ -50,9 +48,7 @@ function mathMethods() {
         document.getElementById("sign").classList.remove("nan");
         document.getElementById("sign").classList.add("red");
         document.getElementById("sign").innerHTML = `${sign}`;
-    } else if (sign = Number.isNaN(sign)) {
-        sign = "NaN";
-
+    } else if (Number.isNaN(sign)) {
         document.getElementById("sign").classList.remove("red");
         document.getElementById("sign").classList.add("nan");
         document.getElementById("sign").innerHTML = `${sign}`;
@@ -69,8 +65,7 @@ function mathMethods() {
         document.getElementById("round").classList.remove("nan");
         document.getElementById("round").classList.add("green");
         document.getElementById("round").innerHTML = `${round} <span class="black">(</span><span class="result black arrow">⬅⬅</span><span class="black">)</span>`;
-    } else if (sign = Number.isNaN(round)) {
-        round = "NaN";
+    } else if (Number.isNaN(round)) {
         document.getElementById("round").classList.remove("green");
         document.getElementById("round").classList.add("nan");
         document.getElementById("round").innerHTML = `${round}`;
@@ -83,8 +78,7 @@ function mathMethods() {
     document.getElementById("trunc").classList.remove("nan");
     document.getElementById("trunc").classList.add("green");
     document.getElementById("trunc").innerHTML = `${trunc} <span class="result black arrow">(⬅⬅)</span>`;
-    if (trunc = Number.isNaN(trunc)) {
-        trunc = "NaN";
+    if (Number.isNaN(trunc)) {
         document.getElementById("trunc").classList.add("nan");
         document.getElementById("trunc").classList.remove("green");
         document.getElementById("trunc").innerHTML = `${trunc}`;
@@ -93,19 +87,16 @@ function mathMethods() {
     document.getElementById("absolute").classList.remove("nan");
     document.getElementById("absolute").classList.add("green");
     document.getElementById("absolute").textContent = absolute;
-    if (absolute = Number.isNaN(absolute)) {
-        absolute = "NaN";
+    if (Number.isNaN(absolute)) {
         document.getElementById("absolute").classList.remove("green");
         document.getElementById("absolute").classList.add("nan");
         document.getElementById("absolute").innerHTML = `${absolute}`;
     };
     
-    if (firstNumber = Number.isNaN(firstNumber)) {
+    if (Number.isNaN(firstNumber)) {
         colorType = "nan";
-        firstNumber = "NaN"
     } else {
         colorType = "green";
-        firstNumber = document.getElementById("first-number").value;
     };
 
     document.getElementById("round-code").innerHTML = `Math.round(<span class="result ${colorType}">${firstNumber}</span>)`;
@@ -215,75 +206,109 @@ function mathTrigMethods() {
     if (Number.isNaN(sin)) {
         document.getElementById("sin").classList.remove("green");
         document.getElementById("sin").classList.add("nan");
-        sin = "NaN";
+        document.getElementById("getSinOf").classList.remove("green");
+        document.getElementById("getSinOf").classList.add("nan");
         document.getElementById("sin").textContent = sin;
     } else {
         document.getElementById("sin").classList.remove("nan");
         document.getElementById("sin").classList.add("green");
+        document.getElementById("getSinOf").classList.remove("nan");
+        document.getElementById("getSinOf").classList.add("green");
         document.getElementById("sin").textContent = sin;
     };
+    document.getElementById("getSinOf").innerHTML = trigNumber;
 
     if (Number.isNaN(cos)) {
         document.getElementById("cos").classList.remove("green");
         document.getElementById("cos").classList.add("nan");
-        cos = "NaN";
+        document.getElementById("getCosOf").classList.remove("green");
+        document.getElementById("getCosOf").classList.add("nan");
         document.getElementById("cos").textContent = cos;
     } else {
         document.getElementById("cos").classList.remove("nan");
         document.getElementById("cos").classList.add("green");
+        document.getElementById("getCosOf").classList.remove("nan");
+        document.getElementById("getCosOf").classList.add("green");
         document.getElementById("cos").textContent = cos;
     };
+    document.getElementById("getCosOf").innerHTML = trigNumber;
 
     if (Number.isNaN(tan)) {
         document.getElementById("tan").classList.remove("green");
         document.getElementById("tan").classList.add("nan");
-        tan = "NaN";
+        document.getElementById("getTanOf").classList.remove("green");
+        document.getElementById("getTanOf").classList.add("nan");
         document.getElementById("tan").textContent = tan;
     } else {
         document.getElementById("tan").classList.remove("nan");
         document.getElementById("tan").classList.add("green");
+        document.getElementById("getTanOf").classList.remove("nan");
+        document.getElementById("getTanOf").classList.add("green");
         document.getElementById("tan").textContent = tan;
     };
+    document.getElementById("getTanOf").innerHTML = trigNumber;
 
-    if (Number.isNaN(log)) {
+    if (trigNumber < 0) {
         document.getElementById("log").classList.remove("green");
         document.getElementById("log").classList.add("nan");
-        log = "NaN";
+        document.getElementById("getLogOf").classList.remove("nan");
+        document.getElementById("getLogOf").classList.add("green");
+        document.getElementById("log").textContent = log;
+    } else if (Number.isNaN(log)) {
+        document.getElementById("log").classList.remove("green");
+        document.getElementById("log").classList.add("nan");
+        document.getElementById("getLogOf").classList.remove("green");
+        document.getElementById("getLogOf").classList.add("nan");
         document.getElementById("log").textContent = log;
     } else {
         document.getElementById("log").classList.remove("nan");
         document.getElementById("log").classList.add("green");
+        document.getElementById("getLogOf").classList.remove("nan");
+        document.getElementById("getLogOf").classList.add("green");
         document.getElementById("log").textContent = log;
     };
+    document.getElementById("getLogOf").innerHTML = trigNumber;
 
-    if (Number.isNaN(log1p)) {
+    if (trigNumber < 0) {
         document.getElementById("log1p").classList.remove("green");
         document.getElementById("log1p").classList.add("nan");
-        log1p = "NaN";
+        document.getElementById("getLog1pOf").classList.remove("nan");
+        document.getElementById("getLog1pOf").classList.add("green");
+        document.getElementById("log1p").textContent = log1p;
+    } else if (Number.isNaN(log1p)) {
+        document.getElementById("log1p").classList.remove("green");
+        document.getElementById("log1p").classList.add("nan");
+        document.getElementById("getLog1pOf").classList.remove("green");
+        document.getElementById("getLog1pOf").classList.add("nan");
         document.getElementById("log1p").textContent = log1p;
     } else {
         document.getElementById("log1p").classList.remove("nan");
         document.getElementById("log1p").classList.add("green");
+        document.getElementById("getLog1pOf").classList.remove("nan");
+        document.getElementById("getLog1pOf").classList.add("green");
         document.getElementById("log1p").textContent = log1p;
     };
+    document.getElementById("getLog1pOf").innerHTML = trigNumber;
 
     if (Number.isNaN(fround)) {
         document.getElementById("fround").classList.remove("green");
         document.getElementById("fround").classList.add("nan");
-        fround = "NaN";
+        document.getElementById("getFroundOf").classList.remove("green");
+        document.getElementById("getFroundOf").classList.add("nan");
         document.getElementById("fround").textContent = fround;
     } else {
         document.getElementById("fround").classList.remove("nan");
         document.getElementById("fround").classList.add("green");
+        document.getElementById("getFroundOf").classList.remove("nan");
+        document.getElementById("getFroundOf").classList.add("green");
         document.getElementById("fround").textContent = fround;
     };
+    document.getElementById("getFroundOf").innerHTML = trigNumber;
 
-    if (trigNumber = Number.isNaN(trigNumber)) {
+    if (Number.isNaN(trigNumber)) {
         colorType = "nan";
-        trigNumber = "NaN"
     } else {
         colorType = "green";
-        trigNumber = document.getElementById("trig-number").value;
     };
 
     document.getElementById("sin-code").innerHTML = `Math.sin(<span class="result ${colorType}">${trigNumber}</span>)`;
