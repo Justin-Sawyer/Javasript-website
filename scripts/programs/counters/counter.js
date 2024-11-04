@@ -191,7 +191,7 @@ function divideByTwo(counter) {
 // dived by two
 function divideByTwo() {
     counter = counter / 2;
-    document.getElementById("counter-label").textContent = <span class="result red">${counter}</span>';
+    document.getElementById("counter-label").textContent = <span class="result red">${counter}</span>;
 }
 
 // reset
@@ -256,7 +256,7 @@ function divideByTwo() {
 // reset
 function resetCounter() {
     counter = 1;
-    document.getElementById("counter-label").textContent = <span class="result">${counter}</span>';
+    document.getElementById("counter-label").textContent = <span class="result">${counter}</span>;
 }
 
 // multiply by two
@@ -321,7 +321,7 @@ function resetCounter() {
 // multiply by two
 function multiplyByTwo() {
     counter = counter * 2;
-    document.getElementById("counter-label").textContent = <span class="result green">${counter}</span>';
+    document.getElementById("counter-label").textContent = <span class="result green">${counter}</span>;
 }</pre>
 <p>Note that with this counter we have to reassign the value of the counter in the divide and multiply functions:</p>
 <pre class="shadow">counter = counter / 2;
