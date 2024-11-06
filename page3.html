@@ -299,7 +299,7 @@
                                             <th id="trim"></th>
                                         </tr>
                                     </table>
-                                    <p class="hide-string-methods" id="hide-trim-explanation">trim() removes white space from the <span class="result">start or end</span></p>
+                                    <p class="hide-string-methods" id="hide-trim-explanation">trim() removes white space from the <span class="result">START OR END</span></p>
                                 </div>
                                 
                                 <!-- string.trimStart() -->
@@ -318,7 +318,7 @@
                                             <th id="trimStart"></th>
                                         </tr>
                                     </table>
-                                    <p class="hide-string-methods" id="hide-trimStart-explanation">trimStart() removes white space from the <span class="result">start</span></p>
+                                    <p class="hide-string-methods" id="hide-trimStart-explanation">trimStart() removes white space from the <span class="result">START</span></p>
                                 </div>
 
                                 <!-- string.trimEnd() -->
@@ -337,7 +337,7 @@
                                             <th id="trimEnd"></th>
                                         </tr>
                                     </table>
-                                    <p class="hide-string-methods" id="hide-trimEnd-explanation">trim() removes white space from the <span class="result">end</span></p>
+                                    <p class="hide-string-methods" id="hide-trimEnd-explanation">trim() removes white space from the <span class="result">END</span></p>
                                 </div>
                             </div>
                         </div>
@@ -349,6 +349,7 @@
                                     <h4>Two or more parameters</h4>
                                 </div>
 
+                                <!-- INPUTS -->
                                 <div class="col-md-4 inner-col">
                                     <div class="input-group">
                                         <span class="input-group-text top-input w-100">Enter any characters</span>
@@ -364,27 +365,44 @@
                                     </div>
                                     <p id="warning-text-two-or-more-parameters"></p>
                                 </div>
+
+                                <!-- string.replace() -->
                                 <div class="col-md-4 inner-col" id="replace-div">
                                     <h5>string.replace()</h5>
                                     <pre class="hide-two-params-string-methods shadow" id="replace-code"></pre>
-                                    <p class="hide-two-params-string-methods" id="hide-replace-explanation">trim() removes white space from the <span class="result">end</span></p>
+                                    <p class="hide-two-params-string-methods" id="hide-replace-explanation">replace() replaces the <span class="result">FIRST OCCURENCE</span> only</p>
                                 </div>
+
+                                <!-- string.replaceAll() -->
                                 <div class="col-md-4 inner-col" id="replaceAll-div">
                                     <h5>string.replaceAll()</h5>
-                                    <pre class="hide-maths-max-min-methods shadow" id="replaceAll-code"></pre>
-                                    <table class="hide-table" id="replaceAll-table">
-                                        <tr class="hide-two-params-string-methods" id="hide-replaceAllCharactersString">
-                                            <th>Input value </th>
+                                    <pre class="hide-string-methods shadow" id="replaceAll-code"></pre>
+                                    <p class="hide-two-params-string-methods" id="hide-replaceAll-explanation">replaceAll() replaces <span class="result">ALL OCCURENCES</span></p>
+                                </div>
+
+                                <!-- string.slice() -->
+                                <div class="col-md-4 inner-col" id="slice-div">
+                                    <h5>string.slice()</h5>
+                                    <pre class="hide-string-methods shadow" id="slice-code"></pre>
+                                    <table class="hide-table" id="slice-table">
+                                        <tr class="hide-two-params-string-methods" id="hide-sliceResultString">
+                                            <th>New string </th>
                                             <th>:</th>
-                                            <th id="replaceAllCharacters-value"></th>
+                                            <th id="sliced-value"></th>
                                         </tr>
-                                        <tr class="hide-two-params-string-methods" id="hide-replacementAllString">
-                                            <th>Trimmed input </th>
+                                        <tr class="hide-two-params-string-methods" id="first-parameter-sliceResultString">
+                                            <th>First parameter </th>
                                             <th>:</th>
-                                            <th id="replacementAll-value"></th>
+                                            <th id="first-parameter"></th>
+                                        </tr>
+                                        <tr class="hide-two-params-string-methods bottom-table-row" id="second-parameter-sliceResultString">
+                                            <th class="bottom-table-row">Second parameter </th>
+                                            <th class="bottom-table-row">:</th>
+                                            <th class="bottom-table-row" id="second-parameter"></th>
                                         </tr>
                                     </table>
-                                    <p class="hide-two-params-string-methods" id="hide-replaceAll-explanation">trim() removes white space from the <span class="result">end</span></p>
+                                    <p class="hide-two-params-string-methods" id="hide-slice-explanation">slice() creates a new string from the first parammeter's <span class="result green">INDEX</span> to the second parameter's <span class="result red ">POSITION</span>.<br>
+                                        If no second parameter is set, the slice continues until the end of the original string.</p>
                                 </div>
                             </div>
                         </div>
